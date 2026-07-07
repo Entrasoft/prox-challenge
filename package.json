@@ -14,7 +14,7 @@
     "typecheck": "tsc --noEmit",
     "check": "tsc --noEmit && eslint .",
     "extract": "tsx scripts/extract.ts",
-    "eval": "node -e \"console.log('npm run eval: eval battery lands in Milestone 3 (see SPEC.md). Nothing to do yet.')\""
+    "eval": "tsx scripts/eval.ts"
   },
   "dependencies": {
     "@anthropic-ai/claude-agent-sdk": "0.3.202",

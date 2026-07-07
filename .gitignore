@@ -16,9 +16,10 @@ next-env.d.ts
 .env.local
 .env*.local
 
-# telemetry & eval outputs (regenerated; not source)
-/runs
+# runtime telemetry log (append-only, can grow) — not source
 /var
+
+# eval runs ARE committed: the accuracy audit trail + regression baseline (SPEC M3).
 
 # extraction working artifacts (page renders during `npm run extract`)
 /kb/.work

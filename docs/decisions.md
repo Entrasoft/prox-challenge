@@ -3,6 +3,36 @@
 One line per non-obvious choice, with the reason. Seeds the README's
 design-decisions section. Newest first.
 
+## M3 — Eval harness
+
+- **The harness runs the REAL agent** (`runAgent` from `src/agent/agent.ts`), so the thing
+  graded is the thing shipped. Ambiguous questions are graded multi-turn via SDK session
+  resume (turn 1 = clarify, turn 2 = answer).
+- **`expected` filled from the KB, human-verified at the checkpoint** (eval-runner rule).
+  Number-bearing answers derive from the M1-signed-off duty-cycle/specs tables.
+- **Judge (Haiku) grades what it can assess.** It cannot see the manual, so it grades
+  `correct` on *presence of the expected key facts + absence of contradicting/invented
+  values* — not verbosity. The first rubric penalized rich, correct answers as "invented"
+  (e.g. V4 re-presenting the selection chart's real six dimensions); the rubric was rewritten
+  to fix that. Judge stays strict on wrong/invented numbers and missing safety warnings.
+- **Capability grounding added to the agent** (system prompt): the process-selection chart is
+  a *general* welding guide, not a statement of this machine's features. The eval caught the
+  agent hallucinating **AC-TIG-for-aluminum** capability from the chart; the fix routes
+  capability claims through the specs' per-process weldable materials (this welder's TIG is
+  DC-only → can't TIG aluminum; aluminum is MIG+spool-gun only). This is an invariant #1 fix.
+- **A4 `must_clarify` relaxed to false** *(human-checkpoint exception, per the eval-runner
+  rule that exceptions get a note)*: "Can I weld aluminum with this?" is answerable correctly
+  and completely without a clarifying question (yes via MIG+spool-gun, no via TIG). A direct
+  answer beats an unnecessary question; forcing a clarify here would over-clarify.
+- **Baseline ~89–93% answer-pass** (agent is non-deterministic). Known honest misses:
+  **T5** — the agent sometimes leads with polarity for tall/ropey/no-penetration welds, where
+  the manual's diagnosis is heat/travel-speed; a diagnostic-reasoning slip to improve, not
+  papered over. **Visual coverage 0/20** by design — `<pxart>` blocks land in M4 (M4 exit is
+  "visual evals pass"). Gate: answer-pass ≥ 85% + no regression vs the previous run.
+- **Cost telemetry per run**: mean/p95 cost per question, agent vs judge split, and overall
+  **cache hit rate** (a health metric — a broken breakpoint would drop it and ~10× cost). A
+  full run is ~$0.8.
+
 ## M2 — Agent core
 
 - **One agent definition (`src/agent/agent.ts`), consumed by route + M3 eval.** No
