@@ -3,6 +3,35 @@
 One line per non-obvious choice, with the reason. Seeds the README's
 design-decisions section. Newest first.
 
+## M4 — Multimodal (artifacts)
+
+- **One protocol module** (`src/artifacts/protocol.ts`) is the source of truth: it exports
+  the block types AND the `PROTOCOL_PROMPT` appended to the system prompt, and the parser
+  derives from it — so the agent grammar and the client parser can't drift (artifact-protocol
+  skill).
+- **Parser re-parses the full accumulated answer each render** rather than a true incremental
+  state machine. Simpler and correct for answer-length text: an unclosed `<pxart>` → `pending`
+  (skeleton), a malformed block → its raw text (never dropped), text between → markdown.
+- **Shared zod prop contract** (`src/components/registry/props.ts`) imported by BOTH
+  `store.registryProps` (server builds + validates) and the components (client parses) → the
+  get_registry_props output and the component props can't drift; bad props render an error
+  card, never a crash.
+- **Figures served from `kb/` via routes** (`/api/figure/[id]`, `/api/figures`) — kb stays the
+  source of truth, no copy into `public/`.
+- **React sandbox uses a vendored React 18 UMD** (`public/vendor/`): React 19 ships no UMD
+  build, and the sandbox iframe (`srcdoc`, `sandbox="allow-scripts"`, no network) needs an
+  inlinable runtime. The parent lazy-loads `@babel/standalone`, transforms the agent TSX, and
+  inlines React 18 + the compiled code + a postMessage height reporter; any error → a
+  view-source fallback. The app itself stays on React 19.
+- **Markdown + artifact segments render together**: the client splits each answer into
+  markdown / block / pending segments and renders each; artifacts fade in (150ms), tables
+  scroll, figures zoom (design-system).
+- **Result**: visual coverage jumped 0/20 → ~19–20; the agent renders a polarity diagram,
+  duty-cycle calculator, settings, troubleshooting flow, real manual figure crops, one-shot
+  SVGs, and sandboxed React — unprompted. Added a grounding line against invented numeric
+  settings after the eval caught the agent making up wire-tension numbers (P3), the same
+  class as the T5 soft spot.
+
 ## M3 — Eval harness
 
 - **The harness runs the REAL agent** (`runAgent` from `src/agent/agent.ts`), so the thing

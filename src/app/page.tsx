@@ -4,6 +4,8 @@ import { useCallback, useRef, useState } from "react";
 import ReactMarkdown from "react-markdown";
 import remarkGfm from "remark-gfm";
 import type { ChatStreamEvent, ResponseMeta } from "@/agent/telemetry";
+import { parseSegments } from "@/artifacts/parser";
+import { ArtifactRenderer, ArtifactSkeleton } from "@/components/artifacts/ArtifactRenderer";
 
 // The challenge's own three example questions — design-system says the empty
 // state shows these as tappable chips.
@@ -183,10 +185,21 @@ function Bubble({ turn, streaming }: { turn: Turn; streaming: boolean }) {
       </div>
     );
   }
+  const segments = parseSegments(turn.text);
   return (
     <div className="flex flex-col gap-2">
       <div className="answer text-[18px] leading-relaxed">
-        <ReactMarkdown remarkPlugins={[remarkGfm]}>{turn.text}</ReactMarkdown>
+        {segments.map((seg, i) =>
+          seg.kind === "md" ? (
+            <ReactMarkdown key={i} remarkPlugins={[remarkGfm]}>
+              {seg.text}
+            </ReactMarkdown>
+          ) : seg.kind === "block" ? (
+            <ArtifactRenderer key={seg.block.id || i} block={seg.block} />
+          ) : (
+            <ArtifactSkeleton key={i} />
+          ),
+        )}
         {streaming && !turn.meta && (
           <span className="ml-0.5 inline-block h-[1.1em] w-[2px] translate-y-[2px] animate-pulse bg-[var(--color-accent)] align-middle" />
         )}

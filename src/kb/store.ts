@@ -22,6 +22,7 @@ import {
   Process,
   type InputVoltage,
 } from "./schema";
+import { REGISTRY_PROP_SCHEMAS } from "@/components/registry/props";
 
 const KB_DIR = path.join(process.cwd(), "kb");
 const read = (rel: string) => readFileSync(path.join(KB_DIR, rel), "utf8");
@@ -147,6 +148,20 @@ export function findFigures(query: string, opts: { tags?: string[]; topK?: numbe
     }));
 }
 
+/** All figures (id, page, source, caption, kind, tags, path) for the client index. */
+export function allFigures() {
+  return kb.figures;
+}
+export function figureById(id: string) {
+  return kb.figures.find((f) => f.id === id) ?? null;
+}
+/** Read a figure crop off disk by id (server-only; used by the /api/figure route). */
+export function figureFile(id: string): { buffer: Buffer; contentType: string } | null {
+  const f = figureById(id);
+  if (!f) return null;
+  return { buffer: readFileSync(path.join(KB_DIR, f.path)), contentType: "image/png" };
+}
+
 // ── Registry component props (data now; components render in M4) ──────────────
 export const RegistryComponent = z.enum([
   "DutyCycleCalculator",
@@ -156,38 +171,75 @@ export const RegistryComponent = z.enum([
 ]);
 export type RegistryComponent = z.infer<typeof RegistryComponent>;
 
-/** Build props for a registry component from the KB. Shape finalized in M4. */
+/** Build KB-grounded, schema-validated props for a registry component. */
 export function registryProps(component: RegistryComponent, params: Record<string, unknown>) {
   const asProcess = (v: unknown): ProcessName | undefined => Process.safeParse(v).data;
-  const asVoltage = (v: unknown): InputVoltage | undefined =>
-    v === 120 || v === 240 ? (v as InputVoltage) : undefined;
 
   switch (component) {
     case "DutyCycleCalculator": {
       const process = asProcess(params.process) ?? "MIG";
-      const entries = dutyCycle({ process, inputVoltage: asVoltage(params.inputVoltage) });
-      const range = kb.specs.electrical.filter((e) => e.process === process);
-      return { component, props: { process, entries, weldingCurrentRange: range, page: entries[0]?.page ?? kb.specs.page } };
+      const rows = kb.dutyCycle.filter((e) => e.process === process);
+      const props = {
+        process,
+        entries: rows.map((e) => ({ inputVoltage: e.inputVoltage, points: e.points })),
+        weldingCurrentRange: kb.specs.electrical
+          .filter((e) => e.process === process)
+          .map((e) => ({
+            inputVoltage: e.inputVoltage,
+            minAmps: e.weldingCurrentRange.minAmps,
+            maxAmps: e.weldingCurrentRange.maxAmps,
+          })),
+        page: rows[0]?.page ?? kb.specs.page,
+        source: rows[0]?.source ?? kb.specs.source,
+      };
+      return { component, props: REGISTRY_PROP_SCHEMAS.DutyCycleCalculator.parse(props) };
     }
     case "PolarityDiagram": {
       const process = asProcess(params.process) ?? "TIG";
-      const entry = polarity({ process })[0] ?? null;
-      return { component, props: { process, polarity: entry } };
+      const e = kb.polarity.find((x) => x.process === process);
+      if (!e) return { component, props: null, error: `no polarity data for ${process}` };
+      const props = {
+        process,
+        electrode: e.electrode,
+        groundClamp: e.groundClamp,
+        polarity: e.polarity,
+        cableSetup: e.cableSetup,
+        page: e.page,
+        source: e.source,
+      };
+      return { component, props: REGISTRY_PROP_SCHEMAS.PolarityDiagram.parse(props) };
     }
     case "SettingsConfigurator": {
       const process = asProcess(params.process) ?? "MIG";
-      return {
-        component,
-        props: {
-          process,
-          examples: synergicSettings({ process, material: params.material as string | undefined }),
-          note: "This machine is synergic — set wire diameter + material thickness and it derives WFS/voltage.",
-        },
+      const examples = kb.synergic
+        .filter((e) => e.process === process)
+        .map((e) => ({
+          material: e.material,
+          thicknessLabel: e.thicknessLabel,
+          wireOrElectrodeDiameterIn: e.wireOrElectrodeDiameterIn,
+          wireFeedSpeed: e.wireFeedSpeed,
+          voltage: e.voltage,
+          gas: e.gas,
+          page: e.page,
+          source: e.source,
+        }));
+      const props = {
+        process,
+        examples,
+        note:
+          "This machine is synergic — set wire diameter + material thickness on the LCD and it derives wire-feed speed and voltage. The values below are the manual's printed examples; for a thickness not listed, dial it in on the machine and read the recommended setting off the display.",
       };
+      return { component, props: REGISTRY_PROP_SCHEMAS.SettingsConfigurator.parse(props) };
     }
     case "TroubleshootingFlow": {
-      const rows = troubleshooting({ query: (params.symptom as string) ?? (params.query as string) ?? "" });
-      return { component, props: { symptom: params.symptom ?? params.query ?? "", entries: rows.slice(0, 5) } };
+      const query = (params.symptom as string) ?? (params.query as string) ?? "";
+      const props = {
+        symptom: query,
+        entries: troubleshooting({ query })
+          .slice(0, 4)
+          .map((e) => ({ symptom: e.symptom, causes: e.causes, page: e.page, source: e.source })),
+      };
+      return { component, props: REGISTRY_PROP_SCHEMAS.TroubleshootingFlow.parse(props) };
     }
   }
 }

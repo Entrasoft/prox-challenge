@@ -7,7 +7,7 @@ const eslintConfig = [
   ...nextCoreWebVitals,
   ...nextTypescript,
   {
-    ignores: ["runs/**", "var/**"],
+    ignores: ["runs/**", "var/**", "public/vendor/**"],
   },
 ];
 

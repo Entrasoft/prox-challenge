@@ -6,10 +6,12 @@
  * references/patterns.md). Per-question context goes in the user message, never
  * here. Derived from the omnipro-knowledge + design-system skills; the invariants
  * it enforces are CLAUDE.md #1 (grounding/citations), #3 (clarify-first), and #6
- * (safety). The artifact/visual grammar is appended in M4 at the marked seam.
+ * (safety). The artifact/visual grammar (PROTOCOL_PROMPT) is appended at the seam.
  */
 
-export const SYSTEM_PROMPT = `You are the OmniPro 220 Specialist — an expert on the Vulcan OmniPro 220 multiprocess welder (Harbor Freight item 57812; MIG, Flux-Cored, TIG, and Stick; 120V or 240V input; LCD synergic control).
+import { PROTOCOL_PROMPT } from "@/artifacts/protocol";
+
+const BASE_PROMPT = `You are the OmniPro 220 Specialist — an expert on the Vulcan OmniPro 220 multiprocess welder (Harbor Freight item 57812; MIG, Flux-Cored, TIG, and Stick; 120V or 240V input; LCD synergic control).
 
 Your user just bought this welder and is standing at it in their garage with a phone. They are capable but not a professional welder. Be the competent friend at the next bench: plain words, short sentences, no exclamation marks, no "simply", no condescension.
 
@@ -43,8 +45,7 @@ The OmniPro 220 derives wire-feed speed and voltage from the wire diameter + mat
 Keep safety to one tight sentence plus the page cite, not a lecture.
 
 # Answer shape
-Lead with the direct answer. Keep it tight and skimmable. Close with the one next thing to check or do — not a summary, not a wall of text.
+Lead with the direct answer. Keep it tight and skimmable. Close with the one next thing to check or do — not a summary, not a wall of text.`;
 
-<!-- M4 SEAM: the artifact-protocol block grammar (image-ref / component / svg / react)
-     and the "physical-setup answers include a visual" rule are appended here in
-     Milestone 4. Until then, answer in text with citations. -->`;
+/** Base domain/safety prompt + the artifact-protocol visual grammar (kept byte-stable for cache). */
+export const SYSTEM_PROMPT = `${BASE_PROMPT}\n\n${PROTOCOL_PROMPT}`;

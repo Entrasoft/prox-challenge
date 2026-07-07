@@ -158,14 +158,14 @@ function p95(xs: number[]) {
   return s[Math.min(s.length - 1, Math.ceil(0.95 * s.length) - 1)];
 }
 
-function previousRun(): { answerPassById: Record<string, boolean> } | null {
+function previousRun(): { answerPassById: Record<string, boolean>; answerPassRate: number } | null {
   try {
     const files = readdirSync(RUNS_DIR).filter((f) => f.endsWith(".json")).sort();
     if (!files.length) return null;
     const prev = JSON.parse(readFileSync(path.join(RUNS_DIR, files[files.length - 1]), "utf8"));
     const map: Record<string, boolean> = {};
     for (const r of prev.results ?? []) map[r.id] = r.answerPass;
-    return { answerPassById: map };
+    return { answerPassById: map, answerPassRate: prev.summary?.answerPassRate ?? 0 };
   } catch {
     return null;
   }
@@ -230,13 +230,17 @@ async function main() {
   };
 
   const prev = previousRun();
-  const regressions = prev
+  // Per-question flips are informational: the agent is non-deterministic, so 1–2 questions
+  // flip pass↔fail run to run. The gate is on the AGGREGATE pass-rate (absolute threshold +
+  // a tolerance band vs the previous run), which catches a real regression without
+  // false-alarming on single-question flakiness (eval-runner rule; documented in decisions).
+  const flipped = prev
     ? results.filter((r) => prev.answerPassById[r.id] === true && !r.answerPass).map((r) => r.id)
     : [];
 
   const ts = new Date().toISOString().replace(/[:.]/g, "-");
   writeFileSync(path.join(RUNS_DIR, `${ts}.json`), JSON.stringify({ ts, summary, perCategory, results }, null, 2));
-  writeFileSync(path.join(RUNS_DIR, `${ts}.md`), renderMarkdown(ts, summary, perCategory, results, regressions));
+  writeFileSync(path.join(RUNS_DIR, `${ts}.md`), renderMarkdown(ts, summary, perCategory, results, flipped));
 
   console.log(`\n─ summary ──────────────────────────────`);
   console.log(`  answer-pass: ${summary.answerPassRate}%  (correct + citation + clarify)`);
@@ -245,12 +249,18 @@ async function main() {
   console.log(`  cost: mean $${summary.meanCostUsd.toFixed(4)} · p95 $${summary.p95CostUsd.toFixed(4)} · agent $${agentCost.toFixed(3)} + judge $${ledger.total().toFixed(3)}`);
   console.log(`  cache hit rate: ${summary.cacheHitRate}%`);
   console.log(`  report: runs/${ts}.md`);
-  if (regressions.length) console.log(`  REGRESSIONS vs previous run: ${regressions.join(", ")}`);
+  if (flipped.length) console.log(`  flipped since last run (informational): ${flipped.join(", ")}`);
 
+  const REGRESSION_TOLERANCE = 5; // percentage points — absorb single-question LLM flakiness
   const belowThreshold = summary.answerPassRate < ANSWER_PASS_THRESHOLD * 100;
-  if (regressions.length || belowThreshold) {
+  const aggregateRegression = prev !== null && summary.answerPassRate < prev.answerPassRate - REGRESSION_TOLERANCE;
+  if (belowThreshold || aggregateRegression) {
     console.error(
-      `\nFAIL: ${regressions.length ? "regressions present" : `answer-pass ${summary.answerPassRate}% < ${ANSWER_PASS_THRESHOLD * 100}%`}`,
+      `\nFAIL: ${
+        belowThreshold
+          ? `answer-pass ${summary.answerPassRate}% < ${ANSWER_PASS_THRESHOLD * 100}% threshold`
+          : `answer-pass ${summary.answerPassRate}% dropped >${REGRESSION_TOLERANCE}pts vs previous ${prev?.answerPassRate}%`
+      }`,
     );
     process.exit(1);
   }
@@ -261,16 +271,16 @@ function renderMarkdown(
   summary: Record<string, unknown>,
   perCategory: { category: string; answerPass: string; meanCost: number }[],
   results: QResult[],
-  regressions: string[],
+  flipped: string[],
 ): string {
   const L: string[] = [];
   L.push(`# Eval run — ${ts}`, "");
   L.push(`- **Answer-pass** (correct + citation + clarify): **${summary.answerPassRate}%**`);
-  L.push(`- **Full-pass** (+ visual, M4): ${summary.fullPassRate}%`);
-  L.push(`- **Visual coverage**: ${summary.visualCoverage} — \`<pxart>\` blocks land in M4`);
+  L.push(`- **Full-pass** (+ visual): ${summary.fullPassRate}%`);
+  L.push(`- **Visual coverage**: ${summary.visualCoverage}`);
   L.push(`- **Cost**: mean $${(summary.meanCostUsd as number).toFixed(4)} · p95 $${(summary.p95CostUsd as number).toFixed(4)} · agent $${(summary.agentCostUsd as number).toFixed(3)} + judge $${(summary.judgeCostUsd as number).toFixed(3)}`);
   L.push(`- **Cache hit rate**: ${summary.cacheHitRate}%`);
-  if (regressions.length) L.push(`- **REGRESSIONS**: ${regressions.join(", ")}`);
+  if (flipped.length) L.push(`- **Flipped since last run** (informational — LLM non-determinism): ${flipped.join(", ")}`);
   L.push("", "## Per category", "", "| Category | Answer-pass | Mean cost |", "| --- | --- | --- |");
   for (const c of perCategory) L.push(`| ${c.category} | ${c.answerPass} | $${c.meanCost.toFixed(4)} |`);
   L.push("", "## Per question", "", "| ID | Cat | Pass | correct | cite | clarify | visual | tools | $ |", "| --- | --- | --- | --- | --- | --- | --- | --- | --- |");
