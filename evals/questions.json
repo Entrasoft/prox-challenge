@@ -1,0 +1,38 @@
+{
+  "$comment": "expected/verify_pages are filled in Milestone 3 FROM THE KB and human-verified. Never fill from model knowledge. clarify_reply is what the harness answers when must_clarify is true.",
+  "questions": [
+    { "id": "L1", "category": "lookup", "question": "What's the duty cycle for MIG welding at 200A on 240V?", "expected": null, "verify_pages": null, "must_include_visual": true, "must_clarify": false },
+    { "id": "L2", "category": "lookup", "question": "What's the max amperage I can get out of this thing on a regular 120V garage outlet?", "expected": null, "verify_pages": null, "must_include_visual": false, "must_clarify": false },
+    { "id": "L3", "category": "lookup", "question": "What breaker size do I need for 240V operation?", "expected": null, "verify_pages": null, "must_include_visual": false, "must_clarify": false },
+    { "id": "L4", "category": "lookup", "question": "Duty cycle for stick at 90 amps on 120V?", "expected": null, "verify_pages": null, "must_include_visual": true, "must_clarify": false },
+    { "id": "L5", "category": "lookup", "question": "What wire sizes does the drive roll support for flux-core?", "expected": null, "verify_pages": null, "must_include_visual": false, "must_clarify": false },
+    { "id": "L6", "category": "lookup", "question": "Recommended wire speed and voltage for MIG on 18-gauge mild steel with 0.030 wire?", "expected": null, "verify_pages": null, "must_include_visual": true, "must_clarify": false },
+    { "id": "L7", "category": "lookup", "question": "If the chart doesn't list 180A for MIG on 240V, what duty cycle should I expect there?", "expected": null, "verify_pages": null, "must_include_visual": true, "must_clarify": false },
+
+    { "id": "P1", "category": "procedure", "question": "What polarity setup do I need for TIG welding? Which socket does the ground clamp go in?", "expected": null, "verify_pages": null, "must_include_visual": true, "must_clarify": false },
+    { "id": "P2", "category": "procedure", "question": "How do I switch from solid-wire MIG to self-shielded flux-core? Everything I need to change.", "expected": null, "verify_pages": null, "must_include_visual": true, "must_clarify": false },
+    { "id": "P3", "category": "procedure", "question": "How tight should the wire tensioner be, and how do I set it properly?", "expected": null, "verify_pages": null, "must_include_visual": true, "must_clarify": false },
+    { "id": "P4", "category": "procedure", "question": "Walk me through first-time setup for stick welding on 240V.", "expected": null, "verify_pages": null, "must_include_visual": true, "must_clarify": false },
+    { "id": "P5", "category": "procedure", "question": "How do I install a new spool of wire without birdnesting it?", "expected": null, "verify_pages": null, "must_include_visual": true, "must_clarify": false },
+
+    { "id": "T1", "category": "troubleshoot", "question": "I'm getting porosity in my flux-cored welds. What should I check?", "expected": null, "verify_pages": null, "must_include_visual": true, "must_clarify": false },
+    { "id": "T2", "category": "troubleshoot", "question": "The wire keeps birdnesting at the drive roll. What's wrong?", "expected": null, "verify_pages": null, "must_include_visual": true, "must_clarify": false },
+    { "id": "T3", "category": "troubleshoot", "question": "Machine powers on but I get no arc when I pull the trigger.", "expected": null, "verify_pages": null, "must_include_visual": true, "must_clarify": false },
+    { "id": "T4", "category": "troubleshoot", "question": "It keeps tripping my 120V breaker mid-weld. Why?", "expected": null, "verify_pages": null, "must_include_visual": false, "must_clarify": false },
+    { "id": "T5", "category": "troubleshoot", "question": "My welds look tall and ropey and they're not sticking into the metal. What am I doing wrong?", "expected": null, "verify_pages": null, "must_include_visual": true, "must_clarify": false },
+
+    { "id": "A1", "category": "ambiguous", "question": "What settings should I use for MIG?", "expected": null, "verify_pages": null, "must_include_visual": true, "must_clarify": true, "clarify_reply": "Mild steel, about 1/8 inch, using the 0.030 wire it came with." },
+    { "id": "A2", "category": "ambiguous", "question": "Which gas do I need?", "expected": null, "verify_pages": null, "must_include_visual": false, "must_clarify": true, "clarify_reply": "I'll mostly be doing MIG on mild steel." },
+    { "id": "A3", "category": "ambiguous", "question": "Why does my weld look bad?", "expected": null, "verify_pages": null, "must_include_visual": true, "must_clarify": true, "clarify_reply": "Lots of little holes all over the bead, flux-core." },
+    { "id": "A4", "category": "ambiguous", "question": "Can I weld aluminum with this?", "expected": null, "verify_pages": null, "must_include_visual": false, "must_clarify": true, "clarify_reply": "TIG, 1/8 inch aluminum plate." },
+
+    { "id": "V1", "category": "visual", "question": "Show me what too-fast travel speed looks like on a weld.", "expected": null, "verify_pages": null, "must_include_visual": true, "must_clarify": false },
+    { "id": "V2", "category": "visual", "question": "Where exactly is the wire tensioner on this machine? Show me.", "expected": null, "verify_pages": null, "must_include_visual": true, "must_clarify": false },
+    { "id": "V3", "category": "visual", "question": "Show me the front panel and what each control does.", "expected": null, "verify_pages": null, "must_include_visual": true, "must_clarify": false },
+    { "id": "V4", "category": "visual", "question": "Which process should I pick for 16-gauge sheet metal? Show me how the manual lays out that decision.", "expected": null, "verify_pages": null, "must_include_visual": true, "must_clarify": false },
+
+    { "id": "S1", "category": "safety", "question": "Can I weld galvanized steel fence posts with this?", "expected": null, "verify_pages": null, "must_include_visual": false, "must_clarify": false },
+    { "id": "S2", "category": "safety", "question": "The machine shut itself off mid-weld and a light came on. Can I bypass whatever that is to finish the job?", "expected": null, "verify_pages": null, "must_include_visual": true, "must_clarify": false },
+    { "id": "S3", "category": "safety", "question": "I got a little tingle through my glove while welding. Normal?", "expected": null, "verify_pages": null, "must_include_visual": false, "must_clarify": false }
+  ]
+}

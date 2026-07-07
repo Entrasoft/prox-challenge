@@ -1,0 +1,74 @@
+@import "tailwindcss";
+
+/*
+ * Design tokens — built for a garage (design-system skill).
+ * Dark by default, high contrast, neutral slate + one safety-orange accent.
+ * Semantic red/green are reserved for polarity and pass/fail only.
+ */
+@theme {
+  --color-bg: #0b0e13;
+  --color-surface: #141a22;
+  --color-surface-2: #1b232d;
+  --color-border: #2a3542;
+  --color-text: #eef2f6;
+  --color-muted: #9aa7b4;
+  --color-faint: #6b7783;
+
+  /* safety orange — primary actions and highlights */
+  --color-accent: #ff6a1a;
+  --color-accent-hover: #ff8140;
+
+  /* polarity convention: red = +/DCEP, dark = − (never remap) */
+  --color-positive: #e5484d;
+  --color-negative: #1b232d;
+
+  --font-sans:
+    "Inter", ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto, Arial, sans-serif;
+  --font-mono: ui-monospace, "SF Mono", "JetBrains Mono", Menlo, monospace;
+}
+
+:root {
+  color-scheme: dark;
+}
+
+html,
+body {
+  height: 100%;
+}
+
+body {
+  background: var(--color-bg);
+  color: var(--color-text);
+  font-family: var(--font-sans);
+  font-size: 16px; /* body ≥ 16px */
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+}
+
+/* Tabular figures for anything numeric (cost chip, readouts). */
+.tabular {
+  font-variant-numeric: tabular-nums;
+  font-feature-settings: "tnum";
+}
+
+/* Styled scrollbars — never leave default browser chrome in artifact cards. */
+* {
+  scrollbar-width: thin;
+  scrollbar-color: var(--color-border) transparent;
+}
+*::-webkit-scrollbar {
+  width: 10px;
+  height: 10px;
+}
+*::-webkit-scrollbar-thumb {
+  background: var(--color-border);
+  border-radius: 9999px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  * {
+    animation-duration: 0.01ms !important;
+    transition-duration: 0.01ms !important;
+  }
+}
