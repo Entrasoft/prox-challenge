@@ -1,0 +1,106 @@
+[
+  {
+    "process": "MIG",
+    "inputVoltage": 120,
+    "points": [
+      {
+        "amps": 100,
+        "dutyPct": 40
+      },
+      {
+        "amps": 75,
+        "dutyPct": 100
+      }
+    ],
+    "basisMinutes": 10,
+    "page": 7,
+    "source": "owner-manual",
+    "notes": "Flux-cored wire runs on the same MIG power section; no separate flux-cored duty-cycle figure is printed in the manual. Flux-cored duty cycle matches these MIG values."
+  },
+  {
+    "process": "MIG",
+    "inputVoltage": 240,
+    "points": [
+      {
+        "amps": 200,
+        "dutyPct": 25
+      },
+      {
+        "amps": 115,
+        "dutyPct": 100
+      }
+    ],
+    "basisMinutes": 10,
+    "page": 7,
+    "source": "owner-manual",
+    "notes": "Flux-cored wire runs on the same MIG power section; no separate flux-cored duty-cycle figure is printed in the manual. Flux-cored duty cycle matches these MIG values."
+  },
+  {
+    "process": "TIG",
+    "inputVoltage": 120,
+    "points": [
+      {
+        "amps": 125,
+        "dutyPct": 40
+      },
+      {
+        "amps": 90,
+        "dutyPct": 100
+      }
+    ],
+    "basisMinutes": 10,
+    "page": 7,
+    "source": "owner-manual"
+  },
+  {
+    "process": "TIG",
+    "inputVoltage": 240,
+    "points": [
+      {
+        "amps": 175,
+        "dutyPct": 30
+      },
+      {
+        "amps": 105,
+        "dutyPct": 100
+      }
+    ],
+    "basisMinutes": 10,
+    "page": 7,
+    "source": "owner-manual"
+  },
+  {
+    "process": "Stick",
+    "inputVoltage": 120,
+    "points": [
+      {
+        "amps": 80,
+        "dutyPct": 40
+      },
+      {
+        "amps": 60,
+        "dutyPct": 100
+      }
+    ],
+    "basisMinutes": 10,
+    "page": 7,
+    "source": "owner-manual"
+  },
+  {
+    "process": "Stick",
+    "inputVoltage": 240,
+    "points": [
+      {
+        "amps": 175,
+        "dutyPct": 25
+      },
+      {
+        "amps": 100,
+        "dutyPct": 100
+      }
+    ],
+    "basisMinutes": 10,
+    "page": 7,
+    "source": "owner-manual"
+  }
+]

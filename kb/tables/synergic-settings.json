@@ -1,0 +1,40 @@
+[
+  {
+    "process": "MIG",
+    "material": "Stainless Steel",
+    "thicknessLabel": "24Ga",
+    "wireOrElectrodeDiameterIn": "0.025",
+    "wireFeedSpeed": null,
+    "voltage": null,
+    "gas": {
+      "type": "Stainless Tri-Mix",
+      "scfh": {
+        "min": 20,
+        "max": 30
+      }
+    },
+    "isSynergicProgramInput": true,
+    "page": 20,
+    "source": "owner-manual",
+    "notes": "Wire diameter (0.025\") and material thickness (24Ga) are synergic program inputs set via Left and Right knobs. Gas type shown as Stainless Tri-Mix on polarity/gas screen. SCFH set between 20-30 per instructions. Auto Weld Settings (WFS and Voltage) are derived by the synergic program; if adjusted manually, white mark on line shows recommended setting."
+  },
+  {
+    "process": "MIG",
+    "material": "Steel",
+    "thicknessLabel": "24Ga",
+    "wireOrElectrodeDiameterIn": "0.030",
+    "wireFeedSpeed": "121 in/min",
+    "voltage": "13.8 V",
+    "gas": {
+      "type": "C25",
+      "scfh": {
+        "min": 20,
+        "max": 30
+      }
+    },
+    "isSynergicProgramInput": false,
+    "page": 20,
+    "source": "owner-manual",
+    "notes": "Values shown on Auto Weld Settings LCD example screen: MIG Steel, C25 gas, 0.030\" wire, 24Ga material thickness, 121 in/min WFS, 13.8 V. These are the synergic-derived recommended outputs; WFS and Voltage can be manually overridden (white mark indicates recommended setting). Run-In WFS shown as 25, Inductance as 5, Spot Timer as 0.0s. SCFH 20-30 from general gas instructions."
+  }
+]

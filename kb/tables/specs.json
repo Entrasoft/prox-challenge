@@ -1,0 +1,125 @@
+{
+  "model": "Vulcan OmniPro 220",
+  "itemNumber": "57812",
+  "maxOcvVolts": 86,
+  "weldableMaterials": [
+    {
+      "process": "MIG",
+      "materials": [
+        "Mild Steel",
+        "Stainless Steel",
+        "Aluminum (with optional Spool Gun)"
+      ]
+    },
+    {
+      "process": "TIG",
+      "materials": [
+        "Mild Steel",
+        "Stainless Steel",
+        "Chrome Moly"
+      ]
+    },
+    {
+      "process": "Stick",
+      "materials": [
+        "Mild Steel",
+        "Stainless Steel"
+      ]
+    }
+  ],
+  "wire": {
+    "solidDiametersIn": [
+      "0.025\"",
+      "0.030\"",
+      "0.035\""
+    ],
+    "fluxCoredDiametersIn": [
+      "0.030\"",
+      "0.035\"",
+      "0.045\""
+    ],
+    "speedIpm": {
+      "min": 50,
+      "max": 500
+    },
+    "spoolCapacity": "Up to 12 lb spool"
+  },
+  "electrical": [
+    {
+      "process": "MIG",
+      "inputVoltage": 120,
+      "inputCurrentAmps": 20.8,
+      "atOutputAmps": 100,
+      "weldingCurrentRange": {
+        "minAmps": 30,
+        "maxAmps": 140
+      }
+    },
+    {
+      "process": "MIG",
+      "inputVoltage": 240,
+      "inputCurrentAmps": 25.5,
+      "atOutputAmps": 200,
+      "weldingCurrentRange": {
+        "minAmps": 30,
+        "maxAmps": 220
+      }
+    },
+    {
+      "process": "TIG",
+      "inputVoltage": 120,
+      "inputCurrentAmps": 20.6,
+      "atOutputAmps": 125,
+      "weldingCurrentRange": {
+        "minAmps": 10,
+        "maxAmps": 125
+      }
+    },
+    {
+      "process": "TIG",
+      "inputVoltage": 240,
+      "inputCurrentAmps": 15.6,
+      "atOutputAmps": 175,
+      "weldingCurrentRange": {
+        "minAmps": 10,
+        "maxAmps": 175
+      }
+    },
+    {
+      "process": "Stick",
+      "inputVoltage": 120,
+      "inputCurrentAmps": 19.5,
+      "atOutputAmps": 80,
+      "weldingCurrentRange": {
+        "minAmps": 10,
+        "maxAmps": 80
+      }
+    },
+    {
+      "process": "Stick",
+      "inputVoltage": 240,
+      "inputCurrentAmps": 23.7,
+      "atOutputAmps": 175,
+      "weldingCurrentRange": {
+        "minAmps": 10,
+        "maxAmps": 175
+      }
+    }
+  ],
+  "circuitRequirements": [
+    {
+      "inputVoltage": 120,
+      "recommendedBreakerAmps": 20,
+      "plugType": null,
+      "notes": "Properly grounded, GFCI protected 120VAC (20 amp rated) receptacle. Circuit must be equipped with delayed action-type circuit breaker or fuses. Plug will only fit one way into Power Input Socket."
+    },
+    {
+      "inputVoltage": 240,
+      "recommendedBreakerAmps": null,
+      "plugType": null,
+      "notes": "Properly grounded 240VAC receptacle that matches the plug. Circuit must be equipped with delayed action-type circuit breaker or fuses. No explicit breaker amp size printed for 240V. Plug will only fit one way into Power Input Socket."
+    }
+  ],
+  "page": 7,
+  "source": "owner-manual"
+}

@@ -1,0 +1,2451 @@
+[
+  {
+    "id": "fig-p1-product-photo",
+    "page": 1,
+    "source": "owner-manual",
+    "caption": "Vulcan Omnipro 220 Multiprocess Welding System",
+    "kind": "photo",
+    "tags": [
+      "welder",
+      "multiprocess",
+      "omnipro220",
+      "vulcan",
+      "front-view",
+      "control-panel",
+      "mig",
+      "tig",
+      "stick"
+    ],
+    "path": "figures/img/fig-p1-product-photo.png",
+    "bbox": {
+      "x": 0.18,
+      "y": 0.3,
+      "w": 0.64,
+      "h": 0.42
+    }
+  },
+  {
+    "id": "fig-p8-front-panel-controls-diagram",
+    "page": 8,
+    "source": "owner-manual",
+    "caption": "Labeled diagram of the Vulcan OmniPro 220 front panel showing all controls and connections",
+    "kind": "panel",
+    "tags": [
+      "front-panel",
+      "controls",
+      "MIG",
+      "spool-gun",
+      "TIG",
+      "stick",
+      "LCD-display",
+      "knobs",
+      "sockets",
+      "power-switch",
+      "wire-feed"
+    ],
+    "path": "figures/img/fig-p8-front-panel-controls-diagram.png",
+    "bbox": {
+      "x": 0.12,
+      "y": 0.07,
+      "w": 0.8,
+      "h": 0.75
+    }
+  },
+  {
+    "id": "fig-p9-figure-interior-controls-diagram",
+    "page": 9,
+    "source": "owner-manual",
+    "caption": "Interior controls of the welder showing Cold Wire Feed Switch, Feed Tensioner, Wire Feed Mechanism, Idler Arm, Wire Spool, Spool Knob, Wire Inlet Liner, Feed Roller Knob, Foot Pedal Socket, and Wire Feed Control Socket.",
+    "kind": "diagram",
+    "tags": [
+      "interior",
+      "controls",
+      "wire-feed",
+      "wire-spool",
+      "spool-knob",
+      "feed-tensioner",
+      "idler-arm",
+      "feed-roller-knob",
+      "cold-wire-feed-switch",
+      "wire-inlet-liner",
+      "foot-pedal-socket",
+      "wire-feed-control-socket"
+    ],
+    "path": "figures/img/fig-p9-figure-interior-controls-diagram.png",
+    "bbox": {
+      "x": 0.03,
+      "y": 0.05,
+      "w": 0.82,
+      "h": 0.52
+    }
+  },
+  {
+    "id": "fig-p10-figure-1-power-switch-unplug",
+    "page": 10,
+    "source": "owner-manual",
+    "caption": "Turn the Power Switch OFF and unplug the Welder before proceeding.",
+    "kind": "diagram",
+    "tags": [
+      "welder",
+      "power switch",
+      "unplug",
+      "setup"
+    ],
+    "path": "figures/img/fig-p10-figure-1-power-switch-unplug.png",
+    "bbox": {
+      "x": 0.48,
+      "y": 0.12,
+      "w": 0.52,
+      "h": 0.18
+    }
+  },
+  {
+    "id": "fig-p10-figure-2-door-latch",
+    "page": 10,
+    "source": "owner-manual",
+    "caption": "Pull up on the Door Latch, then open the Door.",
+    "kind": "diagram",
+    "tags": [
+      "welder",
+      "door",
+      "door latch",
+      "access panel",
+      "wire compartment"
+    ],
+    "path": "figures/img/fig-p10-figure-2-door-latch.png",
+    "bbox": {
+      "x": 0.48,
+      "y": 0.33,
+      "w": 0.52,
+      "h": 0.22
+    }
+  },
+  {
+    "id": "fig-p10-figure-3-1-2-lb-spool-loading",
+    "page": 10,
+    "source": "owner-manual",
+    "caption": "1-2 lb Spool Loading — showing Wingnut, Spacer, Spool Spindle, 1-2 lb Wire Spool, Spool Brake Pad, and Welder Wall.",
+    "kind": "diagram",
+    "tags": [
+      "wire spool",
+      "spool installation",
+      "wingnut",
+      "spacer",
+      "spool spindle",
+      "spool brake pad",
+      "welder wall",
+      "1-2 lb spool"
+    ],
+    "path": "figures/img/fig-p10-figure-3-1-2-lb-spool-loading.png",
+    "bbox": {
+      "x": 0.48,
+      "y": 0.6,
+      "w": 0.52,
+      "h": 0.32
+    }
+  },
+  {
+    "id": "fig-p11-10-12-lb-spool-loading",
+    "page": 11,
+    "source": "owner-manual",
+    "caption": "10-12 lb Spool Loading – exploded diagram showing Spool Knob, Wingnut, Spacer, 10-12 lb Wire Spool, Spool Spindle, Spool Adapter, Spool Brake Pad, and Welder Wall",
+    "kind": "diagram",
+    "tags": [
+      "spool",
+      "wire-spool",
+      "spool-knob",
+      "wingnut",
+      "spacer",
+      "spool-spindle",
+      "spool-adapter",
+      "spool-brake-pad",
+      "welder-wall",
+      "exploded-view",
+      "installation"
+    ],
+    "path": "figures/img/fig-p11-10-12-lb-spool-loading.png",
+    "bbox": {
+      "x": 0.38,
+      "y": 0.02,
+      "w": 0.58,
+      "h": 0.36
+    }
+  },
+  {
+    "id": "fig-p11-wire-unwind-direction",
+    "page": 11,
+    "source": "owner-manual",
+    "caption": "Diagram showing the wire must unwind in the clockwise direction when viewed from the front of the welder",
+    "kind": "diagram",
+    "tags": [
+      "wire-spool",
+      "unwind-direction",
+      "clockwise",
+      "spool",
+      "wire-feed"
+    ],
+    "path": "figures/img/fig-p11-wire-unwind-direction.png",
+    "bbox": {
+      "x": 0.38,
+      "y": 0.44,
+      "w": 0.58,
+      "h": 0.24
+    }
+  },
+  {
+    "id": "fig-p11-feed-tensioner-and-idler-arm",
+    "page": 11,
+    "source": "owner-manual",
+    "caption": "Diagram showing Feed Tensioner knob and Idler Arm position before and after releasing tension",
+    "kind": "diagram",
+    "tags": [
+      "feed-tensioner",
+      "idler-arm",
+      "wire-feed",
+      "tension",
+      "spring-loaded"
+    ],
+    "path": "figures/img/fig-p11-feed-tensioner-and-idler-arm.png",
+    "bbox": {
+      "x": 0.38,
+      "y": 0.75,
+      "w": 0.58,
+      "h": 0.2
+    }
+  },
+  {
+    "id": "fig-p12-feed-roller-diagram-a-d",
+    "page": 12,
+    "source": "owner-manual",
+    "caption": "Feed Roller Knob removal and Feed Roller groove selection diagrams showing Solid Core V-Groove and Flux-Cored Knurled Groove options with wire size markings (0.025, 0.030/0.035, 0.045 groove)",
+    "kind": "diagram",
+    "tags": [
+      "feed roller",
+      "wire feeder",
+      "V-groove",
+      "knurled groove",
+      "solid core",
+      "flux-cored",
+      "wire size",
+      "feed roller knob",
+      "MIG welder"
+    ],
+    "path": "figures/img/fig-p12-feed-roller-diagram-a-d.png",
+    "bbox": {
+      "x": 0.42,
+      "y": 0.03,
+      "w": 0.57,
+      "h": 0.88
+    }
+  },
+  {
+    "id": "fig-p13-fig-13a",
+    "page": 13,
+    "source": "owner-manual",
+    "caption": "Incorrect–Connector not fully inserted",
+    "kind": "diagram",
+    "tags": [
+      "wire-feed",
+      "gun-cable",
+      "connector",
+      "knob",
+      "incorrect",
+      "installation"
+    ],
+    "path": "figures/img/fig-p13-fig-13a.png",
+    "bbox": {
+      "x": 0.35,
+      "y": 0.02,
+      "w": 0.58,
+      "h": 0.28
+    }
+  },
+  {
+    "id": "fig-p13-fig-13b",
+    "page": 13,
+    "source": "owner-manual",
+    "caption": "Correct–Connector fully inserted",
+    "kind": "diagram",
+    "tags": [
+      "wire-feed",
+      "gun-cable",
+      "connector",
+      "correct",
+      "installation",
+      "wire-feed-control-cable"
+    ],
+    "path": "figures/img/fig-p13-fig-13b.png",
+    "bbox": {
+      "x": 0.35,
+      "y": 0.34,
+      "w": 0.58,
+      "h": 0.28
+    }
+  },
+  {
+    "id": "fig-p13-fig-13c",
+    "page": 13,
+    "source": "owner-manual",
+    "caption": "DCEN Flux-Cored (Gasless) Polarity Setup",
+    "kind": "diagram",
+    "tags": [
+      "DCEN",
+      "polarity",
+      "flux-cored",
+      "gasless",
+      "wire-feed-power-cable",
+      "negative-socket",
+      "ground-clamp",
+      "positive-socket",
+      "welder"
+    ],
+    "path": "figures/img/fig-p13-fig-13c.png",
+    "bbox": {
+      "x": 0.32,
+      "y": 0.64,
+      "w": 0.65,
+      "h": 0.33
+    }
+  },
+  {
+    "id": "fig-p14-dcep-polarity-setup-diagram",
+    "page": 14,
+    "source": "owner-manual",
+    "caption": "DCEP Solid Core (Gas Shielded) Polarity Setup showing Ground Clamp Cable in Negative Socket and Wire Feed Power Cable in Positive Socket",
+    "kind": "diagram",
+    "tags": [
+      "DCEP",
+      "polarity",
+      "MIG",
+      "solid-core",
+      "gas-shielded",
+      "ground-clamp",
+      "wire-feed",
+      "welder-connections"
+    ],
+    "path": "figures/img/fig-p14-dcep-polarity-setup-diagram.png",
+    "bbox": {
+      "x": 0.33,
+      "y": 0.03,
+      "w": 0.67,
+      "h": 0.28
+    }
+  },
+  {
+    "id": "fig-p14-figure-c",
+    "page": 14,
+    "source": "owner-manual",
+    "caption": "Gas cylinder secured with two straps on cabinet or cart near the welder",
+    "kind": "diagram",
+    "tags": [
+      "gas-cylinder",
+      "cylinder-mounting",
+      "safety-straps",
+      "shielding-gas"
+    ],
+    "path": "figures/img/fig-p14-figure-c.png",
+    "bbox": {
+      "x": 0.5,
+      "y": 0.32,
+      "w": 0.5,
+      "h": 0.22
+    }
+  },
+  {
+    "id": "fig-p14-figure-d",
+    "page": 14,
+    "source": "owner-manual",
+    "caption": "Briefly open valve to clean, then close valve",
+    "kind": "diagram",
+    "tags": [
+      "cylinder-valve",
+      "gas-cylinder",
+      "valve-cleaning"
+    ],
+    "path": "figures/img/fig-p14-figure-d.png",
+    "bbox": {
+      "x": 0.5,
+      "y": 0.52,
+      "w": 0.5,
+      "h": 0.18
+    }
+  },
+  {
+    "id": "fig-p14-figure-e-f",
+    "page": 14,
+    "source": "owner-manual",
+    "caption": "Regulator attached to cylinder (e) and gas hose connected from regulator outlet to welder gas inlet (f)",
+    "kind": "diagram",
+    "tags": [
+      "regulator",
+      "gas-hose",
+      "cylinder",
+      "gas-inlet",
+      "shielding-gas",
+      "setup"
+    ],
+    "path": "figures/img/fig-p14-figure-e-f.png",
+    "bbox": {
+      "x": 0.3,
+      "y": 0.69,
+      "w": 0.7,
+      "h": 0.28
+    }
+  },
+  {
+    "id": "fig-p15-figure-1-wire-feeding-into-wire-inlet-li",
+    "page": 15,
+    "source": "owner-manual",
+    "caption": "Diagram showing welding wire being guided from the wire spool through the wire inlet liner to the feed guide, with instruction to hold wire securely.",
+    "kind": "diagram",
+    "tags": [
+      "wire spool",
+      "wire inlet liner",
+      "feed guide",
+      "welding wire",
+      "wire feeding"
+    ],
+    "path": "figures/img/fig-p15-figure-1-wire-feeding-into-wire-inlet-li.png",
+    "bbox": {
+      "x": 0.42,
+      "y": 0.14,
+      "w": 0.55,
+      "h": 0.25
+    }
+  },
+  {
+    "id": "fig-p15-figure-2-idler-arm-and-feed-tensioner",
+    "page": 15,
+    "source": "owner-manual",
+    "caption": "Diagram showing the idler arm being pushed down and the feed tensioner swung up to latch across the tip of the arm, securing the welding wire in the feed roller groove.",
+    "kind": "diagram",
+    "tags": [
+      "idler arm",
+      "feed tensioner",
+      "feed roller",
+      "wire drive",
+      "tensioner"
+    ],
+    "path": "figures/img/fig-p15-figure-2-idler-arm-and-feed-tensioner.png",
+    "bbox": {
+      "x": 0.42,
+      "y": 0.42,
+      "w": 0.55,
+      "h": 0.25
+    }
+  },
+  {
+    "id": "fig-p15-figure-3-mig-gun-nozzle-and-contact-tip",
+    "page": 15,
+    "source": "owner-manual",
+    "caption": "Diagram of MIG gun showing the nozzle, contact tip, and gun cable assembly.",
+    "kind": "diagram",
+    "tags": [
+      "MIG gun",
+      "nozzle",
+      "contact tip",
+      "gun cable",
+      "consumables"
+    ],
+    "path": "figures/img/fig-p15-figure-3-mig-gun-nozzle-and-contact-tip.png",
+    "bbox": {
+      "x": 0.42,
+      "y": 0.67,
+      "w": 0.55,
+      "h": 0.22
+    }
+  },
+  {
+    "id": "fig-p16-power-input-socket",
+    "page": 16,
+    "source": "owner-manual",
+    "caption": "Welder rear panel showing Power Input socket location for 120VAC or 240VAC power cord connection.",
+    "kind": "photo",
+    "tags": [
+      "power input",
+      "socket",
+      "rear panel",
+      "welder",
+      "120VAC",
+      "240VAC"
+    ],
+    "path": "figures/img/fig-p16-power-input-socket.png",
+    "bbox": {
+      "x": 0.52,
+      "y": 0.22,
+      "w": 0.45,
+      "h": 0.25
+    }
+  },
+  {
+    "id": "fig-p16-power-switch-connection",
+    "page": 16,
+    "source": "owner-manual",
+    "caption": "Welder front panel showing Power Switch and power cord plugged into GFCI-protected receptacle.",
+    "kind": "photo",
+    "tags": [
+      "power switch",
+      "power cord",
+      "GFCI",
+      "receptacle",
+      "front panel",
+      "welder"
+    ],
+    "path": "figures/img/fig-p16-power-switch-connection.png",
+    "bbox": {
+      "x": 0.48,
+      "y": 0.5,
+      "w": 0.5,
+      "h": 0.22
+    }
+  },
+  {
+    "id": "fig-p16-cold-wire-feed-and-mig-gun",
+    "page": 16,
+    "source": "owner-manual",
+    "caption": "Interior view of wire feeder showing Cold Wire Feed Switch, and separate illustration of MIG Gun with Welding Wire extended 2 inches.",
+    "kind": "diagram",
+    "tags": [
+      "cold wire feed switch",
+      "MIG gun",
+      "welding wire",
+      "wire feeder",
+      "spool",
+      "2 inch"
+    ],
+    "path": "figures/img/fig-p16-cold-wire-feed-and-mig-gun.png",
+    "bbox": {
+      "x": 0.25,
+      "y": 0.74,
+      "w": 0.72,
+      "h": 0.23
+    }
+  },
+  {
+    "id": "fig-p17-fig-1",
+    "page": 17,
+    "source": "owner-manual",
+    "caption": "Wire drive tension check: pressing wire against wood 2–3 inches away, incrementally increasing tension until wire bends; MIG Gun nozzle, contact tip detail",
+    "kind": "diagram",
+    "tags": [
+      "wire-feed",
+      "tension",
+      "MIG-gun",
+      "nozzle",
+      "contact-tip",
+      "drive-tension"
+    ],
+    "path": "figures/img/fig-p17-fig-1.png",
+    "bbox": {
+      "x": 0.42,
+      "y": 0,
+      "w": 0.58,
+      "h": 0.38
+    }
+  },
+  {
+    "id": "fig-p17-fig-2",
+    "page": 17,
+    "source": "owner-manual",
+    "caption": "Optional Spool Gun connection diagram showing Spool Gun, Spool Gun Cable Connector, Wire Feed Control Cable, Spool Gun Gas Outlet, Gas Hose, Ground Clamp Cable in Negative Socket, and Wire Feed Power Cable in Positive Socket",
+    "kind": "diagram",
+    "tags": [
+      "spool-gun",
+      "cable-connector",
+      "wire-feed",
+      "gas-hose",
+      "ground-clamp",
+      "negative-socket",
+      "positive-socket",
+      "setup"
+    ],
+    "path": "figures/img/fig-p17-fig-2.png",
+    "bbox": {
+      "x": 0.35,
+      "y": 0.52,
+      "w": 0.65,
+      "h": 0.44
+    }
+  },
+  {
+    "id": "fig-p18-fig-2-welder-setup-diagram",
+    "page": 18,
+    "source": "owner-manual",
+    "caption": "Diagram of the Vulcan welder unit with power switch labeled, MIG gun, and DCEN polarity symbol",
+    "kind": "diagram",
+    "tags": [
+      "welder",
+      "power switch",
+      "MIG gun",
+      "DCEN",
+      "polarity",
+      "Vulcan",
+      "setup"
+    ],
+    "path": "figures/img/fig-p18-fig-2-welder-setup-diagram.png",
+    "bbox": {
+      "x": 0.38,
+      "y": 0.62,
+      "w": 0.55,
+      "h": 0.2
+    }
+  },
+  {
+    "id": "fig-p19-rated-duty-cycle-120vac",
+    "page": 19,
+    "source": "owner-manual",
+    "caption": "120VAC – 40% Use at 100A For 10 Continuous Minutes: 4 Minutes Welding / 6 Minutes Resting. 100% Continuous Use at 75A.",
+    "kind": "chart",
+    "tags": [
+      "duty-cycle",
+      "120VAC",
+      "pie-chart",
+      "welding",
+      "resting",
+      "100A",
+      "75A"
+    ],
+    "path": "figures/img/fig-p19-rated-duty-cycle-120vac.png",
+    "bbox": {
+      "x": 0.47,
+      "y": 0.04,
+      "w": 0.5,
+      "h": 0.18
+    }
+  },
+  {
+    "id": "fig-p19-rated-duty-cycle-240vac",
+    "page": 19,
+    "source": "owner-manual",
+    "caption": "240VAC – 25% Use at 200A For 10 Continuous Minutes: 2-1/2 Minutes Welding / 7-1/2 Minutes Resting. 100% Continuous Use at 115A.",
+    "kind": "chart",
+    "tags": [
+      "duty-cycle",
+      "240VAC",
+      "pie-chart",
+      "welding",
+      "resting",
+      "200A",
+      "115A"
+    ],
+    "path": "figures/img/fig-p19-rated-duty-cycle-240vac.png",
+    "bbox": {
+      "x": 0.47,
+      "y": 0.22,
+      "w": 0.5,
+      "h": 0.18
+    }
+  },
+  {
+    "id": "fig-p19-setting-up-the-weld-workpiece-clamping-d",
+    "page": 19,
+    "source": "owner-manual",
+    "caption": "Diagram showing clamps holding workpieces with clean surfaces to bare metal and chamfer thick workpieces.",
+    "kind": "diagram",
+    "tags": [
+      "weld-setup",
+      "clamps",
+      "workpiece",
+      "bare-metal",
+      "chamfer",
+      "joint-preparation"
+    ],
+    "path": "figures/img/fig-p19-setting-up-the-weld-workpiece-clamping-d.png",
+    "bbox": {
+      "x": 0.03,
+      "y": 0.43,
+      "w": 0.35,
+      "h": 0.16
+    }
+  },
+  {
+    "id": "fig-p19-welder-ground-connection-photo",
+    "page": 19,
+    "source": "owner-manual",
+    "caption": "Ground connection depends on desired welding polarity. Shows workpiece, clean surface to bare metal, and ground clamp connected to Vulcan welder.",
+    "kind": "photo",
+    "tags": [
+      "ground-clamp",
+      "workpiece",
+      "polarity",
+      "bare-metal",
+      "welder",
+      "Vulcan",
+      "connection"
+    ],
+    "path": "figures/img/fig-p19-welder-ground-connection-photo.png",
+    "bbox": {
+      "x": 0.42,
+      "y": 0.75,
+      "w": 0.55,
+      "h": 0.22
+    }
+  },
+  {
+    "id": "fig-p20-fig-powerswitch",
+    "page": 20,
+    "source": "owner-manual",
+    "caption": "Power Switch location and plug connection for the Vulcan OmniPro 220",
+    "kind": "photo",
+    "tags": [
+      "power switch",
+      "plug",
+      "receptacle",
+      "welder",
+      "Vulcan OmniPro 220"
+    ],
+    "path": "figures/img/fig-p20-fig-powerswitch.png",
+    "bbox": {
+      "x": 0.48,
+      "y": 0.02,
+      "w": 0.52,
+      "h": 0.13
+    }
+  },
+  {
+    "id": "fig-p20-fig-controlpanel",
+    "page": 20,
+    "source": "owner-manual",
+    "caption": "Control panel showing Left Knob, Main Control Knob, and Right Knob on Vulcan OmniPro 220 displaying MIG Stainless Steel process",
+    "kind": "panel",
+    "tags": [
+      "control panel",
+      "LCD display",
+      "left knob",
+      "main control knob",
+      "right knob",
+      "MIG Stainless Steel",
+      "Vulcan OmniPro 220"
+    ],
+    "path": "figures/img/fig-p20-fig-controlpanel.png",
+    "bbox": {
+      "x": 0.03,
+      "y": 0.22,
+      "w": 0.44,
+      "h": 0.22
+    }
+  },
+  {
+    "id": "fig-p20-fig-polarityscreen",
+    "page": 20,
+    "source": "owner-manual",
+    "caption": "LCD screen showing Stainless Tri-Mix gas type and polarity cable connection diagram",
+    "kind": "panel",
+    "tags": [
+      "polarity",
+      "gas type",
+      "Stainless Tri-Mix",
+      "cable connections",
+      "LCD screen",
+      "MIG stainless steel"
+    ],
+    "path": "figures/img/fig-p20-fig-polarityscreen.png",
+    "bbox": {
+      "x": 0.03,
+      "y": 0.72,
+      "w": 0.44,
+      "h": 0.14
+    }
+  },
+  {
+    "id": "fig-p20-fig-wirediameterscreen",
+    "page": 20,
+    "source": "owner-manual",
+    "caption": "LCD screen showing MIG Stainless Steel wire diameter set to .025 inch and material thickness set to 24Ga",
+    "kind": "panel",
+    "tags": [
+      "wire diameter",
+      "material thickness",
+      "MIG stainless steel",
+      "LCD screen",
+      "synergic settings",
+      "0.025 inch",
+      "24Ga"
+    ],
+    "path": "figures/img/fig-p20-fig-wirediameterscreen.png",
+    "bbox": {
+      "x": 0.48,
+      "y": 0.38,
+      "w": 0.5,
+      "h": 0.14
+    }
+  },
+  {
+    "id": "fig-p20-fig-autoweldsettings",
+    "page": 20,
+    "source": "owner-manual",
+    "caption": "Auto Weld Settings screen showing Wire Feed Speed 121 in/min, 0A, Voltage 13.8V/0.0V, MIG Steel, C25 gas, .030 wire diameter, 24Ga thickness, Run-In WFS, Inductance, Spot Timer",
+    "kind": "panel",
+    "tags": [
+      "auto weld",
+      "wire feed speed",
+      "voltage",
+      "amperage",
+      "MIG steel",
+      "C25",
+      "wire diameter",
+      "material thickness",
+      "inductance",
+      "spot timer",
+      "run-in WFS",
+      "LCD screen",
+      "synergic settings"
+    ],
+    "path": "figures/img/fig-p20-fig-autoweldsettings.png",
+    "bbox": {
+      "x": 0.48,
+      "y": 0.6,
+      "w": 0.5,
+      "h": 0.18
+    }
+  },
+  {
+    "id": "fig-p21-screen-run-in-wfs",
+    "page": 21,
+    "source": "owner-manual",
+    "caption": "Display screen showing Run-In WFS optional setting",
+    "kind": "panel",
+    "tags": [
+      "display",
+      "run-in",
+      "WFS",
+      "wire feed speed",
+      "optional setting",
+      "control panel screen"
+    ],
+    "path": "figures/img/fig-p21-screen-run-in-wfs.png",
+    "bbox": {
+      "x": 0.47,
+      "y": 0.01,
+      "w": 0.45,
+      "h": 0.13
+    }
+  },
+  {
+    "id": "fig-p21-screen-inductance",
+    "page": 21,
+    "source": "owner-manual",
+    "caption": "Display screen showing Inductance optional setting",
+    "kind": "panel",
+    "tags": [
+      "display",
+      "inductance",
+      "arc length",
+      "optional setting",
+      "control panel screen"
+    ],
+    "path": "figures/img/fig-p21-screen-inductance.png",
+    "bbox": {
+      "x": 0.47,
+      "y": 0.14,
+      "w": 0.45,
+      "h": 0.13
+    }
+  },
+  {
+    "id": "fig-p21-screen-spot-timer",
+    "page": 21,
+    "source": "owner-manual",
+    "caption": "Display screen showing Spot Timer optional setting",
+    "kind": "panel",
+    "tags": [
+      "display",
+      "spot timer",
+      "spot welding",
+      "optional setting",
+      "control panel screen"
+    ],
+    "path": "figures/img/fig-p21-screen-spot-timer.png",
+    "bbox": {
+      "x": 0.47,
+      "y": 0.27,
+      "w": 0.45,
+      "h": 0.13
+    }
+  },
+  {
+    "id": "fig-p21-screen-recall-setting",
+    "page": 21,
+    "source": "owner-manual",
+    "caption": "Display screen showing Recall Setting optional setting",
+    "kind": "panel",
+    "tags": [
+      "display",
+      "recall setting",
+      "memory",
+      "optional setting",
+      "control panel screen"
+    ],
+    "path": "figures/img/fig-p21-screen-recall-setting.png",
+    "bbox": {
+      "x": 0.47,
+      "y": 0.4,
+      "w": 0.45,
+      "h": 0.13
+    }
+  },
+  {
+    "id": "fig-p21-screen-save-setting",
+    "page": 21,
+    "source": "owner-manual",
+    "caption": "Display screen showing Save Setting optional setting",
+    "kind": "panel",
+    "tags": [
+      "display",
+      "save setting",
+      "memory",
+      "optional setting",
+      "control panel screen"
+    ],
+    "path": "figures/img/fig-p21-screen-save-setting.png",
+    "bbox": {
+      "x": 0.47,
+      "y": 0.53,
+      "w": 0.45,
+      "h": 0.13
+    }
+  },
+  {
+    "id": "fig-p21-photo-gas-cylinder-and-flow-gauge",
+    "page": 21,
+    "source": "owner-manual",
+    "caption": "Illustration of gas cylinder with flow gauge regulator for shielding gas setup",
+    "kind": "photo",
+    "tags": [
+      "gas cylinder",
+      "flow gauge",
+      "regulator",
+      "shielding gas",
+      "setup"
+    ],
+    "path": "figures/img/fig-p21-photo-gas-cylinder-and-flow-gauge.png",
+    "bbox": {
+      "x": 0.56,
+      "y": 0.8,
+      "w": 0.22,
+      "h": 0.14
+    }
+  },
+  {
+    "id": "fig-p22-stringer-bead",
+    "page": 22,
+    "source": "owner-manual",
+    "caption": "stringer bead",
+    "kind": "diagram",
+    "tags": [
+      "weld bead",
+      "stringer",
+      "MIG",
+      "wire welding",
+      "technique"
+    ],
+    "path": "figures/img/fig-p22-stringer-bead.png",
+    "bbox": {
+      "x": 0.42,
+      "y": 0.06,
+      "w": 0.26,
+      "h": 0.13
+    }
+  },
+  {
+    "id": "fig-p22-weave-bead",
+    "page": 22,
+    "source": "owner-manual",
+    "caption": "weave bead",
+    "kind": "diagram",
+    "tags": [
+      "weld bead",
+      "weave",
+      "MIG",
+      "wire welding",
+      "technique"
+    ],
+    "path": "figures/img/fig-p22-weave-bead.png",
+    "bbox": {
+      "x": 0.7,
+      "y": 0.06,
+      "w": 0.27,
+      "h": 0.13
+    }
+  },
+  {
+    "id": "fig-p22-mig-gun-angles",
+    "page": 22,
+    "source": "owner-manual",
+    "caption": "Weld MIG Gun angles, viewed from front of weld joint. 45° fillet weld joint / 90° butt weld joint",
+    "kind": "diagram",
+    "tags": [
+      "MIG gun",
+      "gun angle",
+      "fillet weld",
+      "butt weld",
+      "45 degrees",
+      "90 degrees",
+      "joint angle"
+    ],
+    "path": "figures/img/fig-p22-mig-gun-angles.png",
+    "bbox": {
+      "x": 0.4,
+      "y": 0.25,
+      "w": 0.57,
+      "h": 0.22
+    }
+  },
+  {
+    "id": "fig-p22-push-angle-and-drag-angle",
+    "page": 22,
+    "source": "owner-manual",
+    "caption": "Push Angle (0-15°, Solid Wire with Shielding Gas) and Drag Angle (0-15°, Flux-Cored Wire without Gas)",
+    "kind": "diagram",
+    "tags": [
+      "push angle",
+      "drag angle",
+      "MIG gun tilt",
+      "solid wire",
+      "flux-cored wire",
+      "shielding gas",
+      "weld direction"
+    ],
+    "path": "figures/img/fig-p22-push-angle-and-drag-angle.png",
+    "bbox": {
+      "x": 0.4,
+      "y": 0.57,
+      "w": 0.57,
+      "h": 0.25
+    }
+  },
+  {
+    "id": "fig-p22-ctwd-diagram",
+    "page": 22,
+    "source": "owner-manual",
+    "caption": "CTWD (up to 1/2\") - Contact Tip to Work Distance",
+    "kind": "diagram",
+    "tags": [
+      "CTWD",
+      "contact tip to work distance",
+      "MIG gun",
+      "wire welding",
+      "tip distance"
+    ],
+    "path": "figures/img/fig-p22-ctwd-diagram.png",
+    "bbox": {
+      "x": 0.53,
+      "y": 0.82,
+      "w": 0.35,
+      "h": 0.16
+    }
+  },
+  {
+    "id": "fig-p23-follow-duty-cycle-chart",
+    "page": 23,
+    "source": "owner-manual",
+    "caption": "Duty cycle diagrams for 120VAC (40% use at 100A, 4 min welding / 6 min resting; 100% continuous at 75A) and 240VAC (25% use at 200A, 2.5 min welding / 7.5 min resting; 100% continuous at 115A).",
+    "kind": "chart",
+    "tags": [
+      "duty cycle",
+      "120VAC",
+      "240VAC",
+      "continuous use",
+      "welding time",
+      "resting time",
+      "amperage"
+    ],
+    "path": "figures/img/fig-p23-follow-duty-cycle-chart.png",
+    "bbox": {
+      "x": 0.42,
+      "y": 0.28,
+      "w": 0.58,
+      "h": 0.22
+    }
+  },
+  {
+    "id": "fig-p23-mig-gun-placement-diagram",
+    "page": 23,
+    "source": "owner-manual",
+    "caption": "Illustration showing MIG Gun placed on a concrete slab (or other heat-proof, non-conductive surface) with Power Switch indicated on the welder.",
+    "kind": "diagram",
+    "tags": [
+      "MIG gun",
+      "concrete slab",
+      "non-conductive surface",
+      "power switch",
+      "welder",
+      "safety"
+    ],
+    "path": "figures/img/fig-p23-mig-gun-placement-diagram.png",
+    "bbox": {
+      "x": 0.38,
+      "y": 0.52,
+      "w": 0.62,
+      "h": 0.48
+    }
+  },
+  {
+    "id": "fig-p24-figure-tig-setup-connect-cables",
+    "page": 24,
+    "source": "owner-manual",
+    "caption": "Diagram showing cable connections for TIG welding setup including TIG Torch, Ground Clamp, Foot Pedal, Shielding Gas Hose, and their respective sockets on the welder.",
+    "kind": "diagram",
+    "tags": [
+      "TIG",
+      "setup",
+      "cable connections",
+      "ground clamp",
+      "positive socket",
+      "negative socket",
+      "foot pedal",
+      "shielding gas hose",
+      "TIG torch",
+      "welder"
+    ],
+    "path": "figures/img/fig-p24-figure-tig-setup-connect-cables.png",
+    "bbox": {
+      "x": 0.08,
+      "y": 0.22,
+      "w": 0.88,
+      "h": 0.52
+    }
+  },
+  {
+    "id": "fig-p25-figure-1-2",
+    "page": 25,
+    "source": "owner-manual",
+    "caption": "Shielding gas cylinder setup steps 1-4: securing cylinder, opening valve to clean, attaching regulator, and connecting gas hose",
+    "kind": "diagram",
+    "tags": [
+      "shielding gas",
+      "cylinder",
+      "regulator",
+      "gas hose",
+      "TIG",
+      "setup",
+      "argon"
+    ],
+    "path": "figures/img/fig-p25-figure-1-2.png",
+    "bbox": {
+      "x": 0.27,
+      "y": 0.04,
+      "w": 0.68,
+      "h": 0.54
+    }
+  },
+  {
+    "id": "fig-p25-figure-3",
+    "page": 25,
+    "source": "owner-manual",
+    "caption": "Welder front panel showing Power Input socket location for connecting 120VAC or 240VAC power cord",
+    "kind": "panel",
+    "tags": [
+      "power input",
+      "power cord",
+      "front panel",
+      "120VAC",
+      "240VAC",
+      "socket"
+    ],
+    "path": "figures/img/fig-p25-figure-3.png",
+    "bbox": {
+      "x": 0.42,
+      "y": 0.62,
+      "w": 0.55,
+      "h": 0.34
+    }
+  },
+  {
+    "id": "fig-p26-electrode-grinding-diagram",
+    "page": 26,
+    "source": "owner-manual",
+    "caption": "Illustration showing Electrode tip being ground against a Grinding Wheel at an angle to form a blunt conical point.",
+    "kind": "diagram",
+    "tags": [
+      "tungsten",
+      "electrode",
+      "grinding wheel",
+      "sharpening",
+      "TIG",
+      "angle grinding"
+    ],
+    "path": "figures/img/fig-p26-electrode-grinding-diagram.png",
+    "bbox": {
+      "x": 0.56,
+      "y": 0.08,
+      "w": 0.38,
+      "h": 0.28
+    }
+  },
+  {
+    "id": "fig-p26-tig-torch-assembly-diagram",
+    "page": 26,
+    "source": "owner-manual",
+    "caption": "Exploded diagram of TIG Torch assembly showing Back Cap, Collet, Collet Body, Ceramic Nozzle, and tungsten electrode insertion point.",
+    "kind": "diagram",
+    "tags": [
+      "TIG torch",
+      "assembly",
+      "back cap",
+      "collet",
+      "collet body",
+      "ceramic nozzle",
+      "tungsten electrode",
+      "exploded view"
+    ],
+    "path": "figures/img/fig-p26-tig-torch-assembly-diagram.png",
+    "bbox": {
+      "x": 0.45,
+      "y": 0.48,
+      "w": 0.5,
+      "h": 0.4
+    }
+  },
+  {
+    "id": "fig-p27-fig-1-stick-cable-connection-diagram",
+    "page": 27,
+    "source": "owner-manual",
+    "caption": "Isometric diagram showing Ground Clamp Cable in Negative Socket, Ground Clamp, Electrode Holder Cable in Positive Socket, and Electrode Holder connected to the welder.",
+    "kind": "diagram",
+    "tags": [
+      "stick",
+      "cable-connection",
+      "ground-clamp",
+      "electrode-holder",
+      "negative-socket",
+      "positive-socket",
+      "isometric"
+    ],
+    "path": "figures/img/fig-p27-fig-1-stick-cable-connection-diagram.png",
+    "bbox": {
+      "x": 0.05,
+      "y": 0.06,
+      "w": 0.75,
+      "h": 0.38
+    }
+  },
+  {
+    "id": "fig-p27-fig-2-power-input-socket",
+    "page": 27,
+    "source": "owner-manual",
+    "caption": "Front panel view showing the Power Input socket for connecting 120VAC or 240VAC power cord.",
+    "kind": "panel",
+    "tags": [
+      "power-input",
+      "front-panel",
+      "120VAC",
+      "240VAC",
+      "power-cord"
+    ],
+    "path": "figures/img/fig-p27-fig-2-power-input-socket.png",
+    "bbox": {
+      "x": 0.48,
+      "y": 0.58,
+      "w": 0.47,
+      "h": 0.36
+    }
+  },
+  {
+    "id": "fig-p28-power-on-diagram",
+    "page": 28,
+    "source": "owner-manual",
+    "caption": "Diagram showing welder powered on with TIG torch, indicating Power On state",
+    "kind": "diagram",
+    "tags": [
+      "power-on",
+      "TIG",
+      "torch",
+      "welder",
+      "setup",
+      "schematic"
+    ],
+    "path": "figures/img/fig-p28-power-on-diagram.png",
+    "bbox": {
+      "x": 0.45,
+      "y": 0.6,
+      "w": 0.52,
+      "h": 0.2
+    }
+  },
+  {
+    "id": "fig-p29-tig-rated-duty-cycles",
+    "page": 29,
+    "source": "owner-manual",
+    "caption": "TIG Rated Duty Cycles showing 240VAC and 120VAC duty cycle diagrams with welding/resting minutes",
+    "kind": "chart",
+    "tags": [
+      "duty-cycle",
+      "TIG",
+      "240VAC",
+      "120VAC",
+      "welding",
+      "resting"
+    ],
+    "path": "figures/img/fig-p29-tig-rated-duty-cycles.png",
+    "bbox": {
+      "x": 0.03,
+      "y": 0.28,
+      "w": 0.45,
+      "h": 0.18
+    }
+  },
+  {
+    "id": "fig-p29-stick-rated-duty-cycles",
+    "page": 29,
+    "source": "owner-manual",
+    "caption": "Stick Rated Duty Cycles showing 240VAC and 120VAC duty cycle diagrams with welding/resting minutes",
+    "kind": "chart",
+    "tags": [
+      "duty-cycle",
+      "stick",
+      "240VAC",
+      "120VAC",
+      "welding",
+      "resting"
+    ],
+    "path": "figures/img/fig-p29-stick-rated-duty-cycles.png",
+    "bbox": {
+      "x": 0.5,
+      "y": 0.28,
+      "w": 0.47,
+      "h": 0.18
+    }
+  },
+  {
+    "id": "fig-p29-figure-weld-setup-diagram",
+    "page": 29,
+    "source": "owner-manual",
+    "caption": "Diagram showing clamps, workpieces, clean surfaces to bare metal, and chamfer thick workpieces",
+    "kind": "diagram",
+    "tags": [
+      "weld-setup",
+      "clamps",
+      "workpiece",
+      "bare-metal",
+      "chamfer"
+    ],
+    "path": "figures/img/fig-p29-figure-weld-setup-diagram.png",
+    "bbox": {
+      "x": 0.03,
+      "y": 0.5,
+      "w": 0.42,
+      "h": 0.15
+    }
+  },
+  {
+    "id": "fig-p29-figure-ground-connection-setup",
+    "page": 29,
+    "source": "owner-manual",
+    "caption": "Photo of welder showing ground clamp connection to workpiece, clean surface to bare metal. Ground connection depends on desired welding polarity.",
+    "kind": "photo",
+    "tags": [
+      "ground-clamp",
+      "workpiece",
+      "bare-metal",
+      "polarity",
+      "welder",
+      "setup"
+    ],
+    "path": "figures/img/fig-p29-figure-ground-connection-setup.png",
+    "bbox": {
+      "x": 0.42,
+      "y": 0.73,
+      "w": 0.55,
+      "h": 0.24
+    }
+  },
+  {
+    "id": "fig-p30-control-panel-tig-process-selection",
+    "page": 30,
+    "source": "owner-manual",
+    "caption": "Vulcan Omnipro 220 control panel showing TIG process selected on LCD display, with Left Knob, Main Control Knob, and Right Knob labeled.",
+    "kind": "panel",
+    "tags": [
+      "control-panel",
+      "TIG",
+      "LCD",
+      "knobs",
+      "process-selection",
+      "Vulcan",
+      "Omnipro 220"
+    ],
+    "path": "figures/img/fig-p30-control-panel-tig-process-selection.png",
+    "bbox": {
+      "x": 0.05,
+      "y": 0.54,
+      "w": 0.42,
+      "h": 0.22
+    }
+  },
+  {
+    "id": "fig-p30-screen-polarity-and-gas-settings-100-arg",
+    "page": 30,
+    "source": "owner-manual",
+    "caption": "LCD screen showing polarity connections (negative and positive terminals) and 100% Argon gas type with CONFIRM button.",
+    "kind": "schematic",
+    "tags": [
+      "polarity",
+      "gas-type",
+      "100% Argon",
+      "LCD-screen",
+      "TIG",
+      "DCEN",
+      "cable-connections"
+    ],
+    "path": "figures/img/fig-p30-screen-polarity-and-gas-settings-100-arg.png",
+    "bbox": {
+      "x": 0.52,
+      "y": 0.36,
+      "w": 0.44,
+      "h": 0.14
+    }
+  },
+  {
+    "id": "fig-p30-screen-rod-diameter-and-material-thickne",
+    "page": 30,
+    "source": "owner-manual",
+    "caption": "LCD screen showing TIG rod diameter set to 1/16\" and material thickness set to 24 Ga.",
+    "kind": "panel",
+    "tags": [
+      "rod-diameter",
+      "material-thickness",
+      "TIG",
+      "LCD-screen",
+      "1/16",
+      "24Ga",
+      "settings"
+    ],
+    "path": "figures/img/fig-p30-screen-rod-diameter-and-material-thickne.png",
+    "bbox": {
+      "x": 0.52,
+      "y": 0.63,
+      "w": 0.44,
+      "h": 0.13
+    }
+  },
+  {
+    "id": "fig-p30-screen-auto-weld-settings-30a-0a-0-0v",
+    "page": 30,
+    "source": "owner-manual",
+    "caption": "LCD screen showing Auto Weld Settings with output amperage 30A, 0A actual, 0.0V, process TIG with Pedal, gas type 100% Ar, rod diameter 1/16\", material thickness 24Ga.",
+    "kind": "panel",
+    "tags": [
+      "auto-weld",
+      "amperage",
+      "voltage",
+      "TIG",
+      "LCD-screen",
+      "settings",
+      "rod-diameter",
+      "material-thickness",
+      "gas-type"
+    ],
+    "path": "figures/img/fig-p30-screen-auto-weld-settings-30a-0a-0-0v.png",
+    "bbox": {
+      "x": 0.48,
+      "y": 0.82,
+      "w": 0.5,
+      "h": 0.15
+    }
+  },
+  {
+    "id": "fig-p31-recall-setting-screen",
+    "page": 31,
+    "source": "owner-manual",
+    "caption": "Display screen showing Recall Setting option to retrieve saved settings",
+    "kind": "panel",
+    "tags": [
+      "display",
+      "screen",
+      "recall",
+      "setting",
+      "menu",
+      "UI"
+    ],
+    "path": "figures/img/fig-p31-recall-setting-screen.png",
+    "bbox": {
+      "x": 0.05,
+      "y": 0.18,
+      "w": 0.42,
+      "h": 0.13
+    }
+  },
+  {
+    "id": "fig-p31-save-setting-screen",
+    "page": 31,
+    "source": "owner-manual",
+    "caption": "Display screen showing Save Setting option to program up to 5 different configurations",
+    "kind": "panel",
+    "tags": [
+      "display",
+      "screen",
+      "save",
+      "setting",
+      "menu",
+      "UI"
+    ],
+    "path": "figures/img/fig-p31-save-setting-screen.png",
+    "bbox": {
+      "x": 0.05,
+      "y": 0.31,
+      "w": 0.42,
+      "h": 0.13
+    }
+  },
+  {
+    "id": "fig-p32-fig-1",
+    "page": 32,
+    "source": "owner-manual",
+    "caption": "Vulcan Omnipro 220 control panel showing Stick process selected, with Left Knob, Main Control Knob, and Right Knob labeled",
+    "kind": "panel",
+    "tags": [
+      "control-panel",
+      "stick",
+      "knobs",
+      "LCD",
+      "process-selection"
+    ],
+    "path": "figures/img/fig-p32-fig-1.png",
+    "bbox": {
+      "x": 0.03,
+      "y": 0.42,
+      "w": 0.42,
+      "h": 0.22
+    }
+  },
+  {
+    "id": "fig-p32-fig-2",
+    "page": 32,
+    "source": "owner-manual",
+    "caption": "LCD screen showing polarity setting: No Gas Required, negative and positive terminals",
+    "kind": "panel",
+    "tags": [
+      "LCD",
+      "polarity",
+      "stick",
+      "no-gas",
+      "electrode-holder",
+      "ground-clamp"
+    ],
+    "path": "figures/img/fig-p32-fig-2.png",
+    "bbox": {
+      "x": 0.03,
+      "y": 0.72,
+      "w": 0.42,
+      "h": 0.18
+    }
+  },
+  {
+    "id": "fig-p32-fig-3",
+    "page": 32,
+    "source": "owner-manual",
+    "caption": "LCD screen showing Stick electrode type selection: 60xx",
+    "kind": "panel",
+    "tags": [
+      "LCD",
+      "stick",
+      "electrode-type",
+      "process-selection"
+    ],
+    "path": "figures/img/fig-p32-fig-3.png",
+    "bbox": {
+      "x": 0.52,
+      "y": 0.2,
+      "w": 0.44,
+      "h": 0.13
+    }
+  },
+  {
+    "id": "fig-p32-fig-4",
+    "page": 32,
+    "source": "owner-manual",
+    "caption": "LCD screen showing Stick electrode diameter (3/32\") and material thickness (16 Ga)",
+    "kind": "panel",
+    "tags": [
+      "LCD",
+      "stick",
+      "electrode-diameter",
+      "material-thickness"
+    ],
+    "path": "figures/img/fig-p32-fig-4.png",
+    "bbox": {
+      "x": 0.52,
+      "y": 0.44,
+      "w": 0.44,
+      "h": 0.14
+    }
+  },
+  {
+    "id": "fig-p32-fig-5",
+    "page": 32,
+    "source": "owner-manual",
+    "caption": "Auto Weld Settings display showing 60A output, 0A actual, 0.0V, with process, electrode type, diameter, thickness, Hot Start, and Arc Force labels",
+    "kind": "panel",
+    "tags": [
+      "LCD",
+      "stick",
+      "amperage",
+      "voltage",
+      "auto-weld-settings",
+      "hot-start",
+      "arc-force",
+      "electrode-diameter",
+      "material-thickness"
+    ],
+    "path": "figures/img/fig-p32-fig-5.png",
+    "bbox": {
+      "x": 0.48,
+      "y": 0.72,
+      "w": 0.52,
+      "h": 0.2
+    }
+  },
+  {
+    "id": "fig-p34-strike-test-good-weld",
+    "page": 34,
+    "source": "owner-manual",
+    "caption": "Good weld bends and is not brittle - dead-blow hammer striking scrap workpiece clamped in vise",
+    "kind": "diagram",
+    "tags": [
+      "strike test",
+      "good weld",
+      "dead-blow hammer",
+      "scrap workpiece",
+      "clamp",
+      "vise",
+      "weld quality"
+    ],
+    "path": "figures/img/fig-p34-strike-test-good-weld.png",
+    "bbox": {
+      "x": 0.47,
+      "y": 0.28,
+      "w": 0.5,
+      "h": 0.22
+    }
+  },
+  {
+    "id": "fig-p34-strike-test-poor-weld",
+    "page": 34,
+    "source": "owner-manual",
+    "caption": "Poor weld snaps or cracks - dead-blow hammer striking scrap workpiece clamped in vise",
+    "kind": "diagram",
+    "tags": [
+      "strike test",
+      "poor weld",
+      "dead-blow hammer",
+      "scrap workpiece",
+      "clamp",
+      "vise",
+      "weld quality"
+    ],
+    "path": "figures/img/fig-p34-strike-test-poor-weld.png",
+    "bbox": {
+      "x": 0.47,
+      "y": 0.49,
+      "w": 0.5,
+      "h": 0.22
+    }
+  },
+  {
+    "id": "fig-p34-cleaning-tools",
+    "page": 34,
+    "source": "owner-manual",
+    "caption": "Chipping hammer and wire brush used for cleaning the weld",
+    "kind": "diagram",
+    "tags": [
+      "chipping hammer",
+      "wire brush",
+      "weld cleaning",
+      "post-weld",
+      "tools"
+    ],
+    "path": "figures/img/fig-p34-cleaning-tools.png",
+    "bbox": {
+      "x": 0.47,
+      "y": 0.72,
+      "w": 0.5,
+      "h": 0.25
+    }
+  },
+  {
+    "id": "fig-p35-fig-1",
+    "page": 35,
+    "source": "owner-manual",
+    "caption": "Wire Weld Diagnosis – Workpiece Heat Control / Weld Penetration: showing Inadequate Penetration, Proper Penetration, and Excess Penetration or Burn-Through with heat scale and correction tips",
+    "kind": "diagram",
+    "tags": [
+      "weld penetration",
+      "heat control",
+      "MIG",
+      "wire weld",
+      "diagnosis",
+      "inadequate penetration",
+      "proper penetration",
+      "burn-through",
+      "CTWD",
+      "travel speed",
+      "wire feed",
+      "weld current"
+    ],
+    "path": "figures/img/fig-p35-fig-1.png",
+    "bbox": {
+      "x": 0.03,
+      "y": 0.04,
+      "w": 0.9,
+      "h": 0.26
+    }
+  },
+  {
+    "id": "fig-p35-fig-2",
+    "page": 35,
+    "source": "owner-manual",
+    "caption": "Example Wire Weld Diagrams showing Good Weld, Voltage Too Low/Wire Feed Too Slow, Voltage Too High/Wire Feed Too Fast, Travel Speed Too Fast, Travel Speed Too Slow, and CTWD Too Long or Wrong Polarity with corrective actions",
+    "kind": "diagram",
+    "tags": [
+      "wire weld",
+      "weld diagnosis",
+      "good weld",
+      "voltage too low",
+      "voltage too high",
+      "wire feed speed",
+      "travel speed",
+      "CTWD",
+      "polarity",
+      "MIG",
+      "bead appearance",
+      "cross-section",
+      "correction"
+    ],
+    "path": "figures/img/fig-p35-fig-2.png",
+    "bbox": {
+      "x": 0.03,
+      "y": 0.34,
+      "w": 0.9,
+      "h": 0.6
+    }
+  },
+  {
+    "id": "fig-p36-profile-views-penetration-types",
+    "page": 36,
+    "source": "owner-manual",
+    "caption": "PROFILE VIEWS showing Excess Penetration or Burn-Through, Proper Penetration, and Inadequate Penetration",
+    "kind": "diagram",
+    "tags": [
+      "weld penetration",
+      "burn-through",
+      "proper penetration",
+      "inadequate penetration",
+      "profile view",
+      "cross-section"
+    ],
+    "path": "figures/img/fig-p36-profile-views-penetration-types.png",
+    "bbox": {
+      "x": 0.06,
+      "y": 0.06,
+      "w": 0.88,
+      "h": 0.22
+    }
+  },
+  {
+    "id": "fig-p36-bend-at-joint-profile-view",
+    "page": 36,
+    "source": "owner-manual",
+    "caption": "PROFILE VIEW of bend at joint weld",
+    "kind": "diagram",
+    "tags": [
+      "bend at joint",
+      "profile view",
+      "weld joint",
+      "distortion"
+    ],
+    "path": "figures/img/fig-p36-bend-at-joint-profile-view.png",
+    "bbox": {
+      "x": 0.06,
+      "y": 0.38,
+      "w": 0.38,
+      "h": 0.12
+    }
+  },
+  {
+    "id": "fig-p36-coat-of-slag-over-weld-top-view",
+    "page": 36,
+    "source": "owner-manual",
+    "caption": "TOP VIEW - PARTIALLY CHIPPED AWAY TO SHOW WELD",
+    "kind": "diagram",
+    "tags": [
+      "slag",
+      "flux-cored",
+      "top view",
+      "weld bead",
+      "chipping"
+    ],
+    "path": "figures/img/fig-p36-coat-of-slag-over-weld-top-view.png",
+    "bbox": {
+      "x": 0.06,
+      "y": 0.62,
+      "w": 0.38,
+      "h": 0.1
+    }
+  },
+  {
+    "id": "fig-p36-weld-not-adhering-properly-profile-view",
+    "page": 36,
+    "source": "owner-manual",
+    "caption": "PROFILE VIEW showing gaps between weld and previous bead or between weld and workpiece",
+    "kind": "diagram",
+    "tags": [
+      "weld adhesion",
+      "profile view",
+      "weld gap",
+      "poor fusion"
+    ],
+    "path": "figures/img/fig-p36-weld-not-adhering-properly-profile-view.png",
+    "bbox": {
+      "x": 0.5,
+      "y": 0.62,
+      "w": 0.44,
+      "h": 0.12
+    }
+  },
+  {
+    "id": "fig-p37-wire-weld-porosity-top-view",
+    "page": 37,
+    "source": "owner-manual",
+    "caption": "Small cavities or holes in the bead. Top view of porosity weld bead.",
+    "kind": "diagram",
+    "tags": [
+      "wire weld",
+      "porosity",
+      "bead",
+      "top view",
+      "defect"
+    ],
+    "path": "figures/img/fig-p37-wire-weld-porosity-top-view.png",
+    "bbox": {
+      "x": 0.08,
+      "y": 0.06,
+      "w": 0.3,
+      "h": 0.1
+    }
+  },
+  {
+    "id": "fig-p37-wire-weld-excessive-spatter-top-view",
+    "page": 37,
+    "source": "owner-manual",
+    "caption": "Fine spatter is normal. Spatter that is grainy and large is a problem. Top view of excessive spatter weld bead.",
+    "kind": "diagram",
+    "tags": [
+      "wire weld",
+      "spatter",
+      "bead",
+      "top view",
+      "defect"
+    ],
+    "path": "figures/img/fig-p37-wire-weld-excessive-spatter-top-view.png",
+    "bbox": {
+      "x": 0.5,
+      "y": 0.06,
+      "w": 0.35,
+      "h": 0.12
+    }
+  },
+  {
+    "id": "fig-p37-wire-weld-crooked-wavy-bead-top-view",
+    "page": 37,
+    "source": "owner-manual",
+    "caption": "Top view of crooked or wavy weld bead.",
+    "kind": "diagram",
+    "tags": [
+      "wire weld",
+      "crooked bead",
+      "wavy bead",
+      "top view",
+      "defect"
+    ],
+    "path": "figures/img/fig-p37-wire-weld-crooked-wavy-bead-top-view.png",
+    "bbox": {
+      "x": 0.08,
+      "y": 0.56,
+      "w": 0.3,
+      "h": 0.12
+    }
+  },
+  {
+    "id": "fig-p37-wire-weld-burn-through-top-view",
+    "page": 37,
+    "source": "owner-manual",
+    "caption": "Base material melts away, leaving a hole in the weld. Top view of burn-through defect.",
+    "kind": "diagram",
+    "tags": [
+      "wire weld",
+      "burn-through",
+      "hole",
+      "top view",
+      "defect"
+    ],
+    "path": "figures/img/fig-p37-wire-weld-burn-through-top-view.png",
+    "bbox": {
+      "x": 0.5,
+      "y": 0.56,
+      "w": 0.35,
+      "h": 0.12
+    }
+  },
+  {
+    "id": "fig-p38-figure-1",
+    "page": 38,
+    "source": "owner-manual",
+    "caption": "Stick Weld Diagnosis – Workpiece Heat Control / Weld Penetration: Inadequate Penetration, Proper Penetration, and Excess Penetration or Burn-Through with heat scale from Not hot enough to Too hot",
+    "kind": "diagram",
+    "tags": [
+      "stick weld",
+      "penetration",
+      "heat control",
+      "burn-through",
+      "weld diagnosis",
+      "cross-section"
+    ],
+    "path": "figures/img/fig-p38-figure-1.png",
+    "bbox": {
+      "x": 0.08,
+      "y": 0.04,
+      "w": 0.88,
+      "h": 0.28
+    }
+  },
+  {
+    "id": "fig-p38-figure-2",
+    "page": 38,
+    "source": "owner-manual",
+    "caption": "Example Stick Weld Diagrams showing Good Weld, Current Too Low, Current Too High, Weld Speed Too Fast, Weld Speed Too Slow, Arc Length Too Short, and Arc Length Too Long with correction instructions",
+    "kind": "diagram",
+    "tags": [
+      "stick weld",
+      "weld bead",
+      "weld quality",
+      "current",
+      "weld speed",
+      "arc length",
+      "photo",
+      "diagnosis",
+      "correction"
+    ],
+    "path": "figures/img/fig-p38-figure-2.png",
+    "bbox": {
+      "x": 0.08,
+      "y": 0.42,
+      "w": 0.88,
+      "h": 0.54
+    }
+  },
+  {
+    "id": "fig-p39-profile-views-penetration",
+    "page": 39,
+    "source": "owner-manual",
+    "caption": "Profile views showing excess penetration/burn-through, proper penetration, and inadequate penetration",
+    "kind": "diagram",
+    "tags": [
+      "weld penetration",
+      "burn-through",
+      "profile view",
+      "stick weld",
+      "cross-section"
+    ],
+    "path": "figures/img/fig-p39-profile-views-penetration.png",
+    "bbox": {
+      "x": 0.04,
+      "y": 0.07,
+      "w": 0.92,
+      "h": 0.2
+    }
+  },
+  {
+    "id": "fig-p39-profile-view-weld-not-adhering",
+    "page": 39,
+    "source": "owner-manual",
+    "caption": "Profile view showing gaps between weld and previous bead or workpiece",
+    "kind": "diagram",
+    "tags": [
+      "weld adhesion",
+      "profile view",
+      "stick weld",
+      "gap",
+      "cross-section"
+    ],
+    "path": "figures/img/fig-p39-profile-view-weld-not-adhering.png",
+    "bbox": {
+      "x": 0.06,
+      "y": 0.54,
+      "w": 0.38,
+      "h": 0.12
+    }
+  },
+  {
+    "id": "fig-p39-profile-view-bend-at-joint",
+    "page": 39,
+    "source": "owner-manual",
+    "caption": "Profile view showing bend at joint",
+    "kind": "diagram",
+    "tags": [
+      "bend",
+      "joint",
+      "profile view",
+      "stick weld",
+      "cross-section"
+    ],
+    "path": "figures/img/fig-p39-profile-view-bend-at-joint.png",
+    "bbox": {
+      "x": 0.06,
+      "y": 0.82,
+      "w": 0.38,
+      "h": 0.12
+    }
+  },
+  {
+    "id": "fig-p40-fig-1",
+    "page": 40,
+    "source": "owner-manual",
+    "caption": "Stick Weld – Coat of Slag Over Weld (Top View, partially chipped away to show weld)",
+    "kind": "diagram",
+    "tags": [
+      "stick weld",
+      "slag",
+      "top view",
+      "weld bead",
+      "coating"
+    ],
+    "path": "figures/img/fig-p40-fig-1.png",
+    "bbox": {
+      "x": 0.08,
+      "y": 0.04,
+      "w": 0.35,
+      "h": 0.12
+    }
+  },
+  {
+    "id": "fig-p40-fig-2",
+    "page": 40,
+    "source": "owner-manual",
+    "caption": "Stick Weld – Porosity (Top View showing small cavities or holes in the bead)",
+    "kind": "diagram",
+    "tags": [
+      "stick weld",
+      "porosity",
+      "top view",
+      "weld bead",
+      "defect"
+    ],
+    "path": "figures/img/fig-p40-fig-2.png",
+    "bbox": {
+      "x": 0.08,
+      "y": 0.21,
+      "w": 0.35,
+      "h": 0.12
+    }
+  },
+  {
+    "id": "fig-p40-fig-3",
+    "page": 40,
+    "source": "owner-manual",
+    "caption": "Stick Weld – Crooked/Wavy Bead (Top View)",
+    "kind": "diagram",
+    "tags": [
+      "stick weld",
+      "crooked bead",
+      "wavy bead",
+      "top view",
+      "weld bead",
+      "defect"
+    ],
+    "path": "figures/img/fig-p40-fig-3.png",
+    "bbox": {
+      "x": 0.08,
+      "y": 0.43,
+      "w": 0.35,
+      "h": 0.13
+    }
+  },
+  {
+    "id": "fig-p40-fig-4",
+    "page": 40,
+    "source": "owner-manual",
+    "caption": "Stick Weld – Excessive Spatter (Top View)",
+    "kind": "diagram",
+    "tags": [
+      "stick weld",
+      "spatter",
+      "top view",
+      "weld bead",
+      "defect"
+    ],
+    "path": "figures/img/fig-p40-fig-4.png",
+    "bbox": {
+      "x": 0.08,
+      "y": 0.62,
+      "w": 0.35,
+      "h": 0.12
+    }
+  },
+  {
+    "id": "fig-p40-fig-5",
+    "page": 40,
+    "source": "owner-manual",
+    "caption": "Stick Weld – Burn-Through (Top View showing base material melted away leaving a hole)",
+    "kind": "diagram",
+    "tags": [
+      "stick weld",
+      "burn-through",
+      "top view",
+      "weld defect",
+      "hole"
+    ],
+    "path": "figures/img/fig-p40-fig-5.png",
+    "bbox": {
+      "x": 0.08,
+      "y": 0.82,
+      "w": 0.35,
+      "h": 0.12
+    }
+  },
+  {
+    "id": "fig-p41-mig-gun-nozzle-and-contact-tip",
+    "page": 41,
+    "source": "owner-manual",
+    "caption": "Diagram showing MIG Gun with Nozzle and Contact Tip labeled",
+    "kind": "diagram",
+    "tags": [
+      "MIG gun",
+      "nozzle",
+      "contact tip",
+      "inspection",
+      "cleaning"
+    ],
+    "path": "figures/img/fig-p41-mig-gun-nozzle-and-contact-tip.png",
+    "bbox": {
+      "x": 0.52,
+      "y": 0.42,
+      "w": 0.35,
+      "h": 0.15
+    }
+  },
+  {
+    "id": "fig-p41-display-with-screwdriver",
+    "page": 41,
+    "source": "owner-manual",
+    "caption": "Display (22) with flathead screwdriver inserted into side slot for LCD Screen Cover replacement",
+    "kind": "diagram",
+    "tags": [
+      "display",
+      "LCD screen",
+      "screwdriver",
+      "maintenance",
+      "replacement"
+    ],
+    "path": "figures/img/fig-p41-display-with-screwdriver.png",
+    "bbox": {
+      "x": 0.08,
+      "y": 0.73,
+      "w": 0.3,
+      "h": 0.2
+    }
+  },
+  {
+    "id": "fig-p41-screen-frame-and-screen-cover",
+    "page": 41,
+    "source": "owner-manual",
+    "caption": "Screen Cover (17) being inserted into Screen Frame (18) with gap facing downward",
+    "kind": "diagram",
+    "tags": [
+      "screen cover",
+      "screen frame",
+      "LCD",
+      "replacement",
+      "maintenance"
+    ],
+    "path": "figures/img/fig-p41-screen-frame-and-screen-cover.png",
+    "bbox": {
+      "x": 0.52,
+      "y": 0.7,
+      "w": 0.38,
+      "h": 0.22
+    }
+  },
+  {
+    "id": "fig-p45-wiring-schematic",
+    "page": 45,
+    "source": "owner-manual",
+    "caption": "Full wiring schematic showing power input (AC 120-240V/50/60Hz), PFC/IGBT stage, rectifier, MCU board, LCD screen, remote board, wire feeder motor, solenoid valves, fast wire feed switch, fans, and aviation plugs.",
+    "kind": "schematic",
+    "tags": [
+      "wiring",
+      "schematic",
+      "MCU board",
+      "PFC",
+      "IGBT",
+      "LCD screen",
+      "remote board",
+      "wire feeder",
+      "solenoid valve",
+      "fan",
+      "rectifier",
+      "power input",
+      "aviation plug"
+    ],
+    "path": "figures/img/fig-p45-wiring-schematic.png",
+    "bbox": {
+      "x": 0.04,
+      "y": 0.06,
+      "w": 0.88,
+      "h": 0.9
+    }
+  },
+  {
+    "id": "fig-p47-assembly-diagram",
+    "page": 47,
+    "source": "owner-manual",
+    "caption": "Exploded assembly diagram of welder unit with numbered parts (1–61)",
+    "kind": "diagram",
+    "tags": [
+      "exploded-view",
+      "assembly",
+      "parts",
+      "numbered-components",
+      "welder",
+      "maintenance"
+    ],
+    "path": "figures/img/fig-p47-assembly-diagram.png",
+    "bbox": {
+      "x": 0.03,
+      "y": 0.05,
+      "w": 0.88,
+      "h": 0.58
+    }
+  },
+  {
+    "id": "fig-p1-fig-1",
+    "page": 1,
+    "source": "quick-start-guide",
+    "caption": "2 lb Spool Loading diagram showing Wingnut, Spacer, Spindle, Wire Spool, Brake Pad, and Welder components",
+    "kind": "diagram",
+    "tags": [
+      "spool loading",
+      "wire spool",
+      "spindle",
+      "brake pad",
+      "wingnut",
+      "spacer",
+      "2lb spool"
+    ],
+    "path": "figures/img/fig-p1-fig-1.png",
+    "bbox": {
+      "x": 0.03,
+      "y": 0.08,
+      "w": 0.35,
+      "h": 0.18
+    }
+  },
+  {
+    "id": "fig-p1-fig-2",
+    "page": 1,
+    "source": "quick-start-guide",
+    "caption": "Feed mechanism diagram showing feed guides, welding wire, and wire spool",
+    "kind": "diagram",
+    "tags": [
+      "feed mechanism",
+      "feed guides",
+      "welding wire",
+      "wire spool"
+    ],
+    "path": "figures/img/fig-p1-fig-2.png",
+    "bbox": {
+      "x": 0.62,
+      "y": 0.08,
+      "w": 0.35,
+      "h": 0.18
+    }
+  },
+  {
+    "id": "fig-p1-fig-3",
+    "page": 1,
+    "source": "quick-start-guide",
+    "caption": "MIG gun with nozzle and contact tip labeled, showing 2-inch measurement",
+    "kind": "diagram",
+    "tags": [
+      "MIG gun",
+      "nozzle",
+      "contact tip",
+      "torch"
+    ],
+    "path": "figures/img/fig-p1-fig-3.png",
+    "bbox": {
+      "x": 0.13,
+      "y": 0.29,
+      "w": 0.28,
+      "h": 0.14
+    }
+  },
+  {
+    "id": "fig-p1-fig-4",
+    "page": 1,
+    "source": "quick-start-guide",
+    "caption": "Wire feed tension knob being turned clockwise, with gun bending wire against wood block at 2–3 inches",
+    "kind": "diagram",
+    "tags": [
+      "wire feed tension",
+      "tension knob",
+      "clockwise",
+      "wood block",
+      "feed pressure"
+    ],
+    "path": "figures/img/fig-p1-fig-4.png",
+    "bbox": {
+      "x": 0.13,
+      "y": 0.48,
+      "w": 0.85,
+      "h": 0.17
+    }
+  },
+  {
+    "id": "fig-p1-fig-5",
+    "page": 1,
+    "source": "quick-start-guide",
+    "caption": "Step 5 illustration: unplugging welder from wall outlet and replacing nozzle and tip on gun",
+    "kind": "diagram",
+    "tags": [
+      "unplug",
+      "nozzle",
+      "contact tip",
+      "outlet",
+      "power cord"
+    ],
+    "path": "figures/img/fig-p1-fig-5.png",
+    "bbox": {
+      "x": 0.05,
+      "y": 0.67,
+      "w": 0.6,
+      "h": 0.09
+    }
+  },
+  {
+    "id": "fig-p1-fig-6",
+    "page": 1,
+    "source": "quick-start-guide",
+    "caption": "Step 6 sequence: hold gun clear, plug in welder, power on, set weld thickness and settings on control panel",
+    "kind": "diagram",
+    "tags": [
+      "gun clear",
+      "plug in",
+      "power on",
+      "control panel",
+      "weld thickness",
+      "settings"
+    ],
+    "path": "figures/img/fig-p1-fig-6.png",
+    "bbox": {
+      "x": 0.03,
+      "y": 0.78,
+      "w": 0.95,
+      "h": 0.17
+    }
+  },
+  {
+    "id": "fig-p2-stick-cable-setup-diagram",
+    "page": 2,
+    "source": "quick-start-guide",
+    "caption": "Numbered diagram showing stick welding cable connections: ground clamp to negative terminal, electrode holder to positive terminal, wire feed power disconnected.",
+    "kind": "diagram",
+    "tags": [
+      "stick",
+      "cable",
+      "setup",
+      "ground clamp",
+      "electrode holder",
+      "negative terminal",
+      "positive terminal",
+      "welder connections"
+    ],
+    "path": "figures/img/fig-p2-stick-cable-setup-diagram.png",
+    "bbox": {
+      "x": 0.28,
+      "y": 0.07,
+      "w": 0.72,
+      "h": 0.26
+    }
+  },
+  {
+    "id": "fig-p2-mig-cable-setup-diagram",
+    "page": 2,
+    "source": "quick-start-guide",
+    "caption": "Numbered diagram showing MIG welding cable connections: ground clamp to negative, wire feed power to positive, MIG gun to wire feed, wire feed control inside welder.",
+    "kind": "diagram",
+    "tags": [
+      "MIG",
+      "cable",
+      "setup",
+      "ground clamp",
+      "wire feed",
+      "MIG gun",
+      "negative terminal",
+      "positive terminal",
+      "welder connections"
+    ],
+    "path": "figures/img/fig-p2-mig-cable-setup-diagram.png",
+    "bbox": {
+      "x": 0.28,
+      "y": 0.35,
+      "w": 0.72,
+      "h": 0.28
+    }
+  },
+  {
+    "id": "fig-p2-tig-cable-setup-diagram",
+    "page": 2,
+    "source": "quick-start-guide",
+    "caption": "Numbered diagram showing TIG welding cable connections: ground clamp to positive terminal, TIG torch to negative terminal, gas line to regulator, foot pedal inside welder, wire feed power disconnected.",
+    "kind": "diagram",
+    "tags": [
+      "TIG",
+      "cable",
+      "setup",
+      "ground clamp",
+      "TIG torch",
+      "gas line",
+      "foot pedal",
+      "positive terminal",
+      "negative terminal",
+      "welder connections"
+    ],
+    "path": "figures/img/fig-p2-tig-cable-setup-diagram.png",
+    "bbox": {
+      "x": 0.28,
+      "y": 0.65,
+      "w": 0.72,
+      "h": 0.3
+    }
+  },
+  {
+    "id": "fig-p1-welder-selection-chart",
+    "page": 1,
+    "source": "selection-chart",
+    "caption": "How to Choose a Welder – 6-step decision chart comparing FCAW, MIG/GMAW, Stick/SMAW, and TIG/GTAW processes by skill level, shielding gas, material type, thickness, applications, and weld cleanliness.",
+    "kind": "chart",
+    "tags": [
+      "process-selection",
+      "FCAW",
+      "MIG",
+      "GMAW",
+      "Stick",
+      "SMAW",
+      "TIG",
+      "GTAW",
+      "shielding-gas",
+      "material-type",
+      "material-thickness",
+      "skill-level",
+      "weld-cleanliness"
+    ],
+    "path": "figures/img/fig-p1-welder-selection-chart.png",
+    "bbox": {
+      "x": 0.01,
+      "y": 0.38,
+      "w": 0.93,
+      "h": 0.55
+    }
+  }
+]

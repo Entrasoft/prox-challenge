@@ -1,0 +1,156 @@
+{
+  "columns": [
+    {
+      "process": "Flux-Cored / FCAW",
+      "skillLevel": "Low",
+      "gas": "No-Gas Required",
+      "materials": [
+        "Steel",
+        "Stainless Steel"
+      ],
+      "thicknessRange": "18 Gauge to 5/16\"",
+      "applications": [
+        "Galvanized steel",
+        "General fabrication",
+        "Pipe and tubing",
+        "Maintenance & repair"
+      ],
+      "cleanliness": "More Spatter",
+      "advantages": [
+        "Ideal for outdoor or windy conditions",
+        "Forgiving on rusty or dirty steels",
+        "Good out of position welding capabilities",
+        "High deposition rates achievable"
+      ]
+    },
+    {
+      "process": "MIG / GMAW",
+      "skillLevel": "Low",
+      "gas": "Gas Required — Indoor welding recommended",
+      "materials": [
+        "Steel",
+        "Stainless Steel",
+        "Aluminum (Spool gun required)"
+      ],
+      "thicknessRange": "22 Gauge to 3/8\"",
+      "applications": [
+        "Sheet metal",
+        "Automotive body",
+        "Tubing",
+        "Structural steel"
+      ],
+      "cleanliness": "Clean / Minimal Spatter",
+      "advantages": [
+        "Fast production (high welding speeds)",
+        "Easiest to learn",
+        "Clean welds with no slag",
+        "Better control on thin materials"
+      ]
+    },
+    {
+      "process": "Stick / SMAW",
+      "skillLevel": "Moderate",
+      "gas": "No-Gas Required",
+      "materials": [
+        "Steel",
+        "Stainless Steel",
+        "Castings"
+      ],
+      "thicknessRange": "10 Gauge to 1/2\"",
+      "applications": [
+        "Pipe and tubing",
+        "Structural steel",
+        "Pressure vessels",
+        "Maintenance & repair"
+      ],
+      "cleanliness": "More Spatter",
+      "advantages": [
+        "Ideal for outdoor or windy conditions",
+        "Forgiving on rusty or dirty steels",
+        "Deep penetration",
+        "Good choice for thicker materials"
+      ]
+    },
+    {
+      "process": "TIG / GTAW",
+      "skillLevel": "High",
+      "gas": "Gas Required — Indoor welding recommended",
+      "materials": [
+        "Steel",
+        "Stainless Steel",
+        "Chrome Moly (DC TIG Required)",
+        "Aluminum",
+        "Magnesium Alloys (AC TIG Required)"
+      ],
+      "thicknessRange": "24 Gauge to 3/16\"",
+      "applications": [
+        "Stainless steel exhausts",
+        "Bicycle frames",
+        "Thin wall pipe & tubing",
+        "Metal art"
+      ],
+      "cleanliness": "Extremely Clean",
+      "advantages": [
+        "Highest quality welds",
+        "Extremely aesthetic weld appearance",
+        "Can be used on a variety of materials",
+        "Precise control"
+      ]
+    }
+  ],
+  "migVsFluxCored": [
+    {
+      "attribute": "Uses cored wire",
+      "mig": false,
+      "fluxCored": true
+    },
+    {
+      "attribute": "Uses solid wire",
+      "mig": true,
+      "fluxCored": false
+    },
+    {
+      "attribute": "Uses shielding gas",
+      "mig": true,
+      "fluxCored": false
+    },
+    {
+      "attribute": "Clean welds / minimal spatter",
+      "mig": true,
+      "fluxCored": false
+    },
+    {
+      "attribute": "Welds over mill scale and rust",
+      "mig": false,
+      "fluxCored": true
+    },
+    {
+      "attribute": "Requires minimal surface prep",
+      "mig": false,
+      "fluxCored": true
+    },
+    {
+      "attribute": "Can be used outdoors in windy conditions",
+      "mig": false,
+      "fluxCored": true
+    },
+    {
+      "attribute": "Deep weld penetration",
+      "mig": false,
+      "fluxCored": true
+    },
+    {
+      "attribute": "Handles material gaps well",
+      "mig": false,
+      "fluxCored": true
+    },
+    {
+      "attribute": "Thin materials like sheet metal",
+      "mig": true,
+      "fluxCored": false
+    }
+  ],
+  "dutyCycleExplanation": "The Duty Cycle is the amount of minutes, within a 10-minute period, a welding process can produce the specified welding current without overheating. Duty Cycle Example: 165A @ 30% Duty Cycle — 3 Minutes Welding, 7 Minutes Resting.",
+  "page": 1,
+  "source": "selection-chart"
+}

@@ -3,6 +3,42 @@
 One line per non-obvious choice, with the reason. Seeds the README's
 design-decisions section. Newest first.
 
+## M1 — Extraction
+
+- **Extraction = Messages API (`@anthropic-ai/sdk`), not the Agent SDK.** Per-page
+  vision extraction is a single-shot task, not an agentic loop (claude-api skill).
+  The Agent SDK is reserved for the M2 runtime.
+- **Pipeline: render → classify → targeted extract → crop → Opus verify.** Sonnet
+  4.6 classifies every page (section, text chunks, figure boxes, which tables
+  appear); targeted Sonnet passes extract each typed table from the routed pages;
+  Opus 4.8 re-reads the 4 critical artifacts against the source image cell-by-cell.
+  ~$2.3 total. Product-agnostic: the welder is one entry in a `MANUALS` list.
+- **Duty-cycle table is MIG/TIG/Stick only** (the manual's three spec tables on p7).
+  Flux-cored has no printed duty-cycle table, so it is NOT a row — the shared-power-
+  section fact lives in a note on the MIG entries. Asserting an unprinted flux-cored
+  number would violate invariant #1. *(Human-checkpoint correction.)*
+- **The OmniPro 220 is synergic** — no full thickness→settings lookup table exists in
+  the manual. `synergic-settings.json` holds the printed worked examples (p20); the
+  agent explains synergic derivation for thicknesses not shown rather than inventing
+  values.
+- **Added `polarity.json`** (beyond the skill's default kb layout): polarity is a core
+  physical-setup answer and drives `PolarityDiagram`. Captured from quick-start p2 +
+  owner setup pages; per-process electrode/ground terminal + DCEP/DCEN.
+- **`process-selection.json`** captures the image-only "How to Choose a Welder" chart
+  (`selection-chart.pdf` has no text layer) — the process decision matrix + MIG-vs-
+  flux comparison.
+- **Verification shares source-page routing with extraction** so the verifier sees the
+  exact pages a table came from (fixed false-positive "mismatch" flags where the
+  verifier was shown the wrong page).
+- **KB schema is one Zod file** (`src/kb/schema.ts`), imported by both the pipeline and
+  the M2 tools, so extraction output and runtime reads cannot drift.
+- **Figures**: bounding-box crops with junk/size filtering (warning icons, tiny
+  callouts dropped) → ~109 indexed figures; the four critical artifacts (process
+  selection, wiring schematic, front panel, weld-tips) are captured. Tight figure
+  surfacing is refined in M4.
+- **Rendering via Ghostscript** (poppler/imagemagick absent on the machine); dev-time
+  only, documented — reviewers never run extraction.
+
 ## M0 — Bootstrap
 
 - **Next.js 16 (App Router) + React 19 + TypeScript strict.** Latest stable at

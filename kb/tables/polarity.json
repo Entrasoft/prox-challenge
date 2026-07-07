@@ -1,0 +1,129 @@
+[
+  {
+    "process": "MIG",
+    "variant": "Solid Core (Gas Shielded)",
+    "electrode": "positive",
+    "groundClamp": "negative",
+    "polarity": "DCEP",
+    "cableSetup": [
+      "Plug Ground Clamp Cable into Negative (-) Socket.",
+      "Plug Wire Feed Power Cable into Positive (+) Socket.",
+      "Twist cables clockwise all the way to lock in place.",
+      "Determine which type of shielding gas would be appropriate for the welding you will do.",
+      "Attach the Gas Hose (included) to the Regulator's outlet and the Welder's gas inlet. Wrench-tighten both connections."
+    ],
+    "page": 14,
+    "source": "owner-manual",
+    "notes": "Step 17 – DCEP Direct Current Electrode Positive Wire Setup for Solid Core (gas shielded) welding. Wire Feed Power Cable in Positive Socket; Ground Clamp Cable in Negative Socket."
+  },
+  {
+    "process": "Flux-Cored",
+    "variant": "Gasless (Self-Shielded)",
+    "electrode": "negative",
+    "groundClamp": "positive",
+    "polarity": "DCEN",
+    "cableSetup": [
+      "Plug Ground Clamp Cable into Positive (+) Socket.",
+      "Plug Wire Feed Power Cable into Negative (-) Socket.",
+      "Twist cables clockwise all the way to lock in place."
+    ],
+    "page": 13,
+    "source": "owner-manual",
+    "notes": "Step 16 – DCEN Direct Current Electrode Negative Wire Setup for Flux-Cored (gasless) welding. Wire Feed Power Cable in Negative Socket; Ground Clamp Cable in Positive Socket."
+  },
+  {
+    "process": "TIG",
+    "variant": null,
+    "electrode": "negative",
+    "groundClamp": "positive",
+    "polarity": "DCEN",
+    "cableSetup": [
+      "Plug cables in according to screen (TIG torch to negative terminal, ground clamp to positive terminal).",
+      "Connect gas according to screen (100% Argon).",
+      "Set SCFH between 10-25.",
+      "Connect gas line to gas regulator.",
+      "Connect foot pedal inside welder.",
+      "Leave wire feed power disconnected."
+    ],
+    "page": 30,
+    "source": "owner-manual",
+    "notes": "TIG Welding section step 9a – polarity screen shows TIG torch on negative (−) terminal, ground clamp on positive (+) terminal, 100% Argon gas."
+  },
+  {
+    "process": "Stick",
+    "variant": null,
+    "electrode": "positive",
+    "groundClamp": "negative",
+    "polarity": "DCEP",
+    "cableSetup": [
+      "Plug cables in according to screen (electrode holder to positive terminal, ground clamp to negative terminal).",
+      "No gas required."
+    ],
+    "page": 32,
+    "source": "owner-manual",
+    "notes": "Stick Welding section step 7a – polarity screen shows electrode holder on positive (+) terminal, ground clamp on negative (−) terminal, No Gas Required."
+  },
+  {
+    "process": "MIG",
+    "variant": "Solid Core (Gas Shielded)",
+    "electrode": "positive",
+    "groundClamp": "negative",
+    "polarity": "DCEP",
+    "cableSetup": [
+      "Connect ground clamp to negative terminal.",
+      "Connect wire feed power to positive terminal.",
+      "Connect MIG gun to wire feed.",
+      "Connect wire feed control inside welder."
+    ],
+    "page": 1,
+    "source": "quick-start-guide",
+    "notes": "Quick Start Guide – MIG CABLE SETUP."
+  },
+  {
+    "process": "Flux-Cored",
+    "variant": "Gasless (Self-Shielded)",
+    "electrode": "negative",
+    "groundClamp": "positive",
+    "polarity": "DCEN",
+    "cableSetup": [
+      "Follow MIG cable setup but connect ground clamp to positive terminal and wire feed power to negative terminal.",
+      "Connect MIG gun to wire feed.",
+      "Connect wire feed control inside welder."
+    ],
+    "page": 1,
+    "source": "quick-start-guide",
+    "notes": "Quick Start Guide – FLUX CABLE SETUP: Follow MIG cable setup but swap polarity."
+  },
+  {
+    "process": "TIG",
+    "variant": null,
+    "electrode": "negative",
+    "groundClamp": "positive",
+    "polarity": "DCEN",
+    "cableSetup": [
+      "Connect ground clamp to positive terminal.",
+      "Connect TIG torch to negative terminal.",
+      "Connect gas line to gas regulator.",
+      "Connect foot pedal inside welder.",
+      "Leave wire feed power disconnected."
+    ],
+    "page": 1,
+    "source": "quick-start-guide",
+    "notes": "Quick Start Guide – TIG CABLE SETUP."
+  },
+  {
+    "process": "Stick",
+    "variant": null,
+    "electrode": "positive",
+    "groundClamp": "negative",
+    "polarity": "DCEP",
+    "cableSetup": [
+      "Connect ground clamp to negative terminal.",
+      "Connect electrode holder to positive terminal.",
+      "Leave wire feed power disconnected."
+    ],
+    "page": 1,
+    "source": "quick-start-guide",
+    "notes": "Quick Start Guide – STICK CABLE SETUP."
+  }
+]

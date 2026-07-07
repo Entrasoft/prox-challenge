@@ -13,7 +13,7 @@
     "lint": "eslint .",
     "typecheck": "tsc --noEmit",
     "check": "tsc --noEmit && eslint .",
-    "extract": "node -e \"console.log('npm run extract: KB extraction lands in Milestone 1 (see SPEC.md). Nothing to do yet.')\"",
+    "extract": "tsx scripts/extract.ts",
     "eval": "node -e \"console.log('npm run eval: eval battery lands in Milestone 3 (see SPEC.md). Nothing to do yet.')\""
   },
   "dependencies": {
@@ -32,7 +32,9 @@
     "@types/react-dom": "^19",
     "eslint": "^9",
     "eslint-config-next": "16.2.10",
+    "sharp": "^0.34.0",
     "tailwindcss": "^4",
+    "tsx": "^4.19.0",
     "typescript": "^5"
   }
 }
