@@ -3,6 +3,36 @@
 One line per non-obvious choice, with the reason. Seeds the README's
 design-decisions section. Newest first.
 
+## M2 — Agent core
+
+- **One agent definition (`src/agent/agent.ts`), consumed by route + M3 eval.** No
+  divergent configs — the thing evals grade is the thing users hit (agent-sdk skill).
+- **Numbers-from-KB via `lookup_table`; prose via `search_manual`; figures via
+  `get_figure`.** Domain logic lives in `src/kb/store.ts` (pure, SDK-free,
+  unit-tested); the four tools are thin wrappers returning JSON with `page`+`source`.
+  `get_registry_props` is built now but unused until M4 wires the artifact grammar.
+- **`searchManual` is lexical (deterministic), not embeddings.** No embedding API
+  cost, fully reproducible; the manual is small enough that term-overlap scoring
+  surfaces the right chunk (verified: "wire tensioner tight" → Wire Setup p17).
+- **Multi-turn via SDK session `resume`, not client-sent history.** The result
+  message's `session_id` flows to the client, which echoes it on the next turn — so
+  clarify→answer is one conversation with the SDK holding history.
+- **`tools: []` + `bypassPermissions`.** No built-in tools (only our KB tools exist);
+  all tools are read-only KB reads, so skipping the permission prompt is safe and the
+  server never hangs waiting for interactive approval. `settingSources: []` isolates
+  the agent from the dev's `~/.claude`.
+- **No extended thinking at runtime.** Snappy first token; the agentic tool loop does
+  the reasoning. Revisit if cross-reference answers regress.
+- **Markdown rendering pulled forward from M5.** The agent emits tables/bold/lists;
+  plain-text rendering showed literal \`**\`/\`|\`, which read as broken. Added
+  `react-markdown` + `remark-gfm` with dark prose styling (scrollable tables per
+  design-system) — small change, large visible win, so it belongs with the first real
+  answers rather than M5.
+- **Cost is computed locally per answer and logged.** `resultToMeta` maps the SDK
+  usage → `Usage` and prices it from `pricing.ts`; every request appends to
+  `var/usage.jsonl` (SPEC §telemetry). Verified answers cost ~$0.013–0.03 with healthy
+  cache reads.
+
 ## M1 — Extraction
 
 - **Extraction = Messages API (`@anthropic-ai/sdk`), not the Agent SDK.** Per-page

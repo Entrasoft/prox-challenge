@@ -1,48 +1,51 @@
 /**
- * Chat endpoint — the real streaming plumbing, end to end.
+ * Chat endpoint — the real Agent SDK loop (M2).
  *
- * M0: the reply is a hardcoded canned answer streamed token-by-token as NDJSON,
- * followed by one `meta` event carrying usage/cost in the real telemetry shape.
- * M2 replaces `cannedAnswer()` with the Agent SDK `query()` loop; the transport,
- * the event grammar, and the cost path stay exactly as they are here, so nothing
- * downstream (the client parser, the cost chip) has to change.
+ * Iterates the agent's streamed messages and translates them into the NDJSON
+ * event grammar in src/agent/telemetry.ts: token deltas → `delta`, the final
+ * result → `meta` (usage + locally-computed cost + sessionId), then `done`.
+ * The transport and event grammar are unchanged from M0, so the client parser
+ * and cost chip work as-is. Multi-turn (clarify → answer) rides on the SDK
+ * session: the client echoes the `sessionId` from the last meta.
  */
 
-import { computeCostUsd } from "@/agent/cost";
-import { DEFAULT_MODEL } from "@/agent/pricing";
-import type { ChatStreamEvent, ResponseMeta, Usage } from "@/agent/telemetry";
+import { appendFileSync, mkdirSync } from "node:fs";
+import path from "node:path";
+import { runAgent, resultToMeta } from "@/agent/agent";
+import type { ChatStreamEvent, ResponseMeta } from "@/agent/telemetry";
 
-// The Agent SDK (M2) runs a subprocess, so this route must be the Node.js runtime.
+// The Agent SDK spawns a subprocess — Node.js runtime, no static optimization.
 export const runtime = "nodejs";
 export const dynamic = "force-dynamic";
+export const maxDuration = 120;
 
-const CANNED_ANSWER = [
-  "I'm the OmniPro 220 specialist — still being wired up.",
-  "",
-  "Right now this is a plumbing check: the answer you're reading streamed from",
-  "the server token-by-token over the same channel the real agent will use, and",
-  "the footer below carries real usage and cost telemetry (placeholder numbers",
-  "until Milestone 2 connects the Claude Agent SDK).",
-  "",
-  "Once the knowledge base is extracted, ask me about duty cycles, polarity",
-  "setup, wire tension, or a weld that's misbehaving — and I'll answer with the",
-  "manual page and a diagram, not a wall of text.",
-].join(" ");
-
-/** Split text into small word-ish chunks so it streams like real tokens. */
-function tokenize(text: string): string[] {
-  return text.match(/\S+\s*/g) ?? [text];
+/** Append one usage record per request for the README cost table + eval health (SPEC §telemetry). */
+function logUsage(meta: ResponseMeta) {
+  try {
+    const dir = path.join(process.cwd(), "var");
+    mkdirSync(dir, { recursive: true });
+    appendFileSync(
+      path.join(dir, "usage.jsonl"),
+      JSON.stringify({ at: new Date().toISOString(), ...meta }) + "\n",
+    );
+  } catch {
+    // telemetry logging must never break a response
+  }
 }
 
-const sleep = (ms: number) => new Promise((r) => setTimeout(r, ms));
-
 export async function POST(req: Request): Promise<Response> {
-  // The user's message isn't used yet (canned reply); parse it so the contract
-  // with the client is already correct for M2.
-  await req.json().catch(() => ({ message: "" }));
+  const body = (await req.json().catch(() => ({}))) as { message?: string; sessionId?: string };
+  const message = (body.message ?? "").trim();
+  if (!message) {
+    return new Response(JSON.stringify({ error: "empty message" }), {
+      status: 400,
+      headers: { "Content-Type": "application/json" },
+    });
+  }
 
-  const startedAt = Date.now();
   const encoder = new TextEncoder();
+  const abortController = new AbortController();
+  req.signal.addEventListener("abort", () => abortController.abort());
 
   const stream = new ReadableStream<Uint8Array>({
     async start(controller) {
@@ -50,25 +53,29 @@ export async function POST(req: Request): Promise<Response> {
         controller.enqueue(encoder.encode(JSON.stringify(event) + "\n"));
 
       try {
-        for (const chunk of tokenize(CANNED_ANSWER)) {
-          send({ t: "delta", v: chunk });
-          await sleep(18);
+        for await (const msg of runAgent({ prompt: message, resume: body.sessionId, abortController })) {
+          // Token deltas of the assistant's visible text.
+          if (msg.type === "stream_event") {
+            const ev = msg.event;
+            if (ev.type === "content_block_delta" && ev.delta.type === "text_delta") {
+              send({ t: "delta", v: ev.delta.text });
+            }
+            continue;
+          }
+          // End of the turn: usage/cost + session id, then done.
+          if (msg.type === "result") {
+            const meta = resultToMeta(msg);
+            logUsage(meta);
+            if (msg.subtype !== "success") {
+              send({ t: "error", message: "The agent hit an error finishing that answer." });
+            }
+            send({ t: "meta", meta });
+            send({ t: "done" });
+          }
         }
-
-        // Placeholder usage in the real shape. In M2 these come from the SDK
-        // result message's usage accounting; the cost is always computed by us.
-        const usage: Usage = { tokensIn: 1200, tokensOut: 320, cacheRead: 5400, cacheWrite: 1500 };
-        const meta: ResponseMeta = {
-          model: DEFAULT_MODEL,
-          usage,
-          costUsd: computeCostUsd(DEFAULT_MODEL, usage),
-          turns: 1,
-          latencyMs: Date.now() - startedAt,
-        };
-        send({ t: "meta", meta });
-        send({ t: "done" });
       } catch (err) {
         send({ t: "error", message: err instanceof Error ? err.message : "Something went wrong." });
+        send({ t: "done" });
       } finally {
         controller.close();
       }

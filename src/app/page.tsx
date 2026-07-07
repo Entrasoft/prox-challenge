@@ -1,6 +1,8 @@
 "use client";
 
 import { useCallback, useRef, useState } from "react";
+import ReactMarkdown from "react-markdown";
+import remarkGfm from "remark-gfm";
 import type { ChatStreamEvent, ResponseMeta } from "@/agent/telemetry";
 
 // The challenge's own three example questions — design-system says the empty
@@ -22,6 +24,8 @@ export default function Home() {
   const [input, setInput] = useState("");
   const [busy, setBusy] = useState(false);
   const scrollRef = useRef<HTMLDivElement>(null);
+  // SDK session id — echoed back so a clarify→answer pair is one conversation.
+  const sessionIdRef = useRef<string | undefined>(undefined);
 
   const scrollToEnd = useCallback(() => {
     requestAnimationFrame(() =>
@@ -42,7 +46,7 @@ export default function Home() {
         const res = await fetch("/api/chat", {
           method: "POST",
           headers: { "Content-Type": "application/json" },
-          body: JSON.stringify({ message: text }),
+          body: JSON.stringify({ message: text, sessionId: sessionIdRef.current }),
         });
         if (!res.body) throw new Error("No response stream.");
 
@@ -60,6 +64,7 @@ export default function Home() {
           for (const line of lines) {
             if (!line.trim()) continue;
             const event = JSON.parse(line) as ChatStreamEvent;
+            if (event.t === "meta" && event.meta.sessionId) sessionIdRef.current = event.meta.sessionId;
             applyEvent(event, setTurns);
           }
           scrollToEnd();
@@ -180,10 +185,10 @@ function Bubble({ turn, streaming }: { turn: Turn; streaming: boolean }) {
   }
   return (
     <div className="flex flex-col gap-2">
-      <div className="whitespace-pre-wrap text-[18px] leading-relaxed">
-        {turn.text}
+      <div className="answer text-[18px] leading-relaxed">
+        <ReactMarkdown remarkPlugins={[remarkGfm]}>{turn.text}</ReactMarkdown>
         {streaming && !turn.meta && (
-          <span className="ml-0.5 inline-block h-[1.1em] w-[2px] translate-y-[2px] animate-pulse bg-[var(--color-accent)]" />
+          <span className="ml-0.5 inline-block h-[1.1em] w-[2px] translate-y-[2px] animate-pulse bg-[var(--color-accent)] align-middle" />
         )}
       </div>
       {turn.meta && <CostChip meta={turn.meta} />}

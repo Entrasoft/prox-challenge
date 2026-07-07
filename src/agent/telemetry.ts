@@ -21,6 +21,8 @@ export interface ResponseMeta {
   costUsd: number;
   turns: number;
   latencyMs: number;
+  /** SDK session id — the client sends it back so a clarify→answer pair is one conversation. */
+  sessionId?: string;
 }
 
 /**
