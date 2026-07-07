@@ -46,6 +46,12 @@ body {
   text-rendering: optimizeLegibility;
 }
 
+/* Visible keyboard focus everywhere (a11y). */
+:where(button, a, textarea, input, [tabindex]):focus-visible {
+  outline: 2px solid var(--color-accent);
+  outline-offset: 2px;
+}
+
 /* Tabular figures for anything numeric (cost chip, readouts). */
 .tabular {
   font-variant-numeric: tabular-nums;

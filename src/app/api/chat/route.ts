@@ -13,6 +13,28 @@ import { appendFileSync, mkdirSync } from "node:fs";
 import path from "node:path";
 import { runAgent, resultToMeta } from "@/agent/agent";
 import type { ChatStreamEvent, ResponseMeta } from "@/agent/telemetry";
+import { rateLimit, clientIp } from "@/lib/rateLimit";
+
+/** Map a tool call to a calm, product-voice status line (design-system). */
+function statusFor(name: string, input: Record<string, unknown>): string {
+  const tool = name.replace(/^mcp__omnipro__/, "");
+  if (tool === "lookup_table") {
+    const table = String(input.table ?? "");
+    const phrase: Record<string, string> = {
+      "duty-cycle": "Checking the duty-cycle chart…",
+      specs: "Checking the specifications…",
+      polarity: "Checking the polarity setup…",
+      "synergic-settings": "Checking the settings…",
+      troubleshooting: "Checking the troubleshooting guide…",
+      "process-selection": "Checking the process chart…",
+    };
+    return phrase[table] ?? "Checking the manual's tables…";
+  }
+  if (tool === "search_manual") return "Reading the manual…";
+  if (tool === "get_figure") return "Finding the right figure…";
+  if (tool === "get_registry_props") return "Building the diagram…";
+  return "Working on it…";
+}
 
 // The Agent SDK spawns a subprocess — Node.js runtime, no static optimization.
 export const runtime = "nodejs";
@@ -34,6 +56,14 @@ function logUsage(meta: ResponseMeta) {
 }
 
 export async function POST(req: Request): Promise<Response> {
+  const limit = rateLimit(clientIp(req));
+  if (!limit.ok) {
+    return new Response(
+      JSON.stringify({ error: "rate_limited", retryAfter: limit.retryAfter }),
+      { status: 429, headers: { "Content-Type": "application/json", "Retry-After": String(limit.retryAfter) } },
+    );
+  }
+
   const body = (await req.json().catch(() => ({}))) as { message?: string; sessionId?: string };
   const message = (body.message ?? "").trim();
   if (!message) {
@@ -59,6 +89,13 @@ export async function POST(req: Request): Promise<Response> {
             const ev = msg.event;
             if (ev.type === "content_block_delta" && ev.delta.type === "text_delta") {
               send({ t: "delta", v: ev.delta.text });
+            }
+            continue;
+          }
+          // A calm status line while the agent works a tool (before text arrives).
+          if (msg.type === "assistant") {
+            for (const block of msg.message.content) {
+              if (block.type === "tool_use") send({ t: "status", v: statusFor(block.name, block.input) });
             }
             continue;
           }

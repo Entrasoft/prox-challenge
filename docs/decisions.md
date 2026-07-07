@@ -3,6 +3,32 @@
 One line per non-obvious choice, with the reason. Seeds the README's
 design-decisions section. Newest first.
 
+## M5 — Polish (local; deploy deferred)
+
+- **Session ledger** derived from accumulated answer metadata (no extra state): a header
+  button shows the running total; the drawer lists per-answer cost + model. Plus the
+  per-answer cost chip. Satisfies the SPEC M5 "cost chip + session ledger visible and
+  correct" criterion.
+- **Voice, no second vendor key** (Web Speech API): mic → `SpeechRecognition` fills the
+  input with a listening state; a speaker toggle reads answers via `SpeechSynthesis`
+  (artifacts/markdown stripped to prose first). Feature-detected with `useSyncExternalStore`
+  so there's no SSR hydration mismatch and no set-state-in-effect.
+- **Calm tool-status line**: the route maps each `tool_use` to a product-voice line
+  ("Checking the duty-cycle chart…") streamed as a `status` event; the client shows it
+  before the first token, then clears it. Addresses the design-system "one-line status if
+  slower" note.
+- **Rate limiting**: in-memory per-IP token bucket (25 / 5 min), rejected with a 429 BEFORE
+  any agent call (so it costs nothing), surfaced as a polite rate-limited banner. Per
+  Cloud Run instance — a shared store would be needed for strict multi-instance limits.
+- **Mobile / states / a11y**: no horizontal overflow at 375px, 44px targets, focus-visible
+  outlines, aria labels + dialog roles; empty / error / rate-limited / loading (status +
+  skeleton) states all present.
+- **Deploy deferred by choice.** Target when we do it: **Cloud Run** (the app needs a
+  persistent Node container that can spawn the Agent SDK subprocess + stream — not static
+  or edge), reached via **Firebase App Hosting**, fronted by **Cloudflare** for
+  `omnipro.relightlabs.ai` DNS/CDN. I'll generate the `apphosting.yaml` / Dockerfile at
+  deploy time. (Fly/Railway in the SPEC were just the author's suggestion.)
+
 ## M4 — Multimodal (artifacts)
 
 - **One protocol module** (`src/artifacts/protocol.ts`) is the source of truth: it exports
