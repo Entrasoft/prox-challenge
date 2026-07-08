@@ -7,7 +7,7 @@ for a garage DIYer standing at the machine with a phone.
 
 <img src="product.webp" alt="Vulcan OmniPro 220" width="360" />
 
-> **Hosted demo:** `omnipro.relightlabs.ai` *(deploy pending — it runs locally in two minutes, below)*
+> **Hosted demo:** **[try it live](https://omnipro--entrasoft-finpredict-2025.us-east4.hosted.app)** — on Firebase App Hosting (Cloud Run), warm and streaming. *(Vanity domain `omnipro.relightlabs.ai` coming soon; it also runs locally in two minutes, below.)*
 >
 > Built for the [Prox Founding Engineer Challenge](https://useprox.com/join/challenge): manual in,
 > product specialist out. The welder is one config — **the same pipeline points at any manual.**
