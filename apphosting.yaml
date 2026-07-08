@@ -1,0 +1,33 @@
+# Firebase App Hosting — builds and runs this Next.js app on Cloud Run.
+# Node version comes from package.json "engines" (>=20.9) and .nvmrc (22).
+# See docs/DEPLOY.md for the full steps (secret, connect repo, Cloudflare DNS).
+
+runConfig:
+  cpu: 1
+  memoryMiB: 1024 # room for the app + the Agent SDK subprocess it spawns per request
+  minInstances: 0 # cost-free when idle; set to 1 to avoid cold-start subprocess lag on the demo
+  maxInstances: 3
+  concurrency: 8 # each request spawns a subprocess — keep concurrency modest so we don't OOM
+
+env:
+  # The one secret — create it in Secret Manager (see DEPLOY.md), grant App Hosting access.
+  - variable: ANTHROPIC_API_KEY
+    secret: ANTHROPIC_API_KEY
+    availability:
+      - RUNTIME
+
+  # Cloud Run's filesystem is read-only except /tmp. Point everything that writes at /tmp:
+  # HOME + Claude config dir (the Agent SDK subprocess persists session state there), and
+  # the per-request usage log.
+  - variable: HOME
+    value: /tmp
+    availability:
+      - RUNTIME
+  - variable: CLAUDE_CONFIG_DIR
+    value: /tmp/.claude
+    availability:
+      - RUNTIME
+  - variable: USAGE_LOG_DIR
+    value: /tmp
+    availability:
+      - RUNTIME

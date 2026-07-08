@@ -1,0 +1,13 @@
+node_modules
+.next
+.git
+.env
+.env.*
+!.env.example
+files
+runs
+var
+kb/.work
+npm-debug.log*
+Dockerfile
+.dockerignore

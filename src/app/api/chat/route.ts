@@ -44,7 +44,8 @@ export const maxDuration = 120;
 /** Append one usage record per request for the README cost table + eval health (SPEC §telemetry). */
 function logUsage(meta: ResponseMeta) {
   try {
-    const dir = path.join(process.cwd(), "var");
+    // Configurable so it can point at /tmp on a read-only container filesystem (Cloud Run).
+    const dir = process.env.USAGE_LOG_DIR ?? path.join(process.cwd(), "var");
     mkdirSync(dir, { recursive: true });
     appendFileSync(
       path.join(dir, "usage.jsonl"),
