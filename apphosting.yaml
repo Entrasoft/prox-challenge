@@ -5,7 +5,7 @@
 runConfig:
   cpu: 1
   memoryMiB: 1024 # room for the app + the Agent SDK subprocess it spawns per request
-  minInstances: 0 # cost-free when idle; set to 1 to avoid cold-start subprocess lag on the demo
+  minInstances: 1 # keep one warm instance so the demo never pays the ~10-20s cold-start + subprocess spawn
   maxInstances: 3
   concurrency: 8 # each request spawns a subprocess — keep concurrency modest so we don't OOM
 
