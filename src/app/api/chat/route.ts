@@ -41,6 +41,31 @@ export const runtime = "nodejs";
 export const dynamic = "force-dynamic";
 export const maxDuration = 120;
 
+/**
+ * Emit one structured access line per real chat request. Goes to stdout, which
+ * Cloud Run captures into Cloud Logging as `jsonPayload` — queryable and durable
+ * across instance scaling (unlike the ephemeral /tmp usage log). Lets us tell a
+ * genuine visitor (real IP + browser UA) apart from our own tests: the Cloud Run
+ * request log masks the client as Google's edge proxy, but the app sees the real
+ * client via clientIp()'s x-forwarded-for / cf-connecting-ip resolution.
+ */
+function logAccess(req: Request, message: string) {
+  try {
+    console.log(
+      JSON.stringify({
+        evt: "chat_access",
+        at: new Date().toISOString(),
+        ip: clientIp(req),
+        ua: req.headers.get("user-agent") ?? "unknown",
+        ref: req.headers.get("referer") ?? null,
+        msgPreview: message.slice(0, 80),
+      }),
+    );
+  } catch {
+    // access logging must never break a response
+  }
+}
+
 /** Append one usage record per request for the README cost table + eval health (SPEC §telemetry). */
 function logUsage(meta: ResponseMeta) {
   try {
@@ -73,6 +98,8 @@ export async function POST(req: Request): Promise<Response> {
       headers: { "Content-Type": "application/json" },
     });
   }
+
+  logAccess(req, message);
 
   const encoder = new TextEncoder();
   const abortController = new AbortController();
